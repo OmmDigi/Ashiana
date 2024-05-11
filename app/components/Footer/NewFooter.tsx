@@ -6,9 +6,9 @@ import { FaMapLocation } from "react-icons/fa6";
 
 const locationList = [
   "AA-48, Salt Lake, Sec-1, Kolkata -700064. (Near PNB Bus Stop, Beside Karur Vysya Bank).",
-  "VIP Road, Baguiali, Kolkata – 700059.",
-  "9/38 Jhautala, Atgharaa, Chinar Park, Kolkata -700057.",
-  "55, Gariahat Road, Ballygunge phari, Kolkata -700019.",
+  // "VIP Road, Baguiali, Kolkata – 700059.",
+  // "9/38 Jhautala, Atgharaa, Chinar Park, Kolkata -700057.",
+  // "55, Gariahat Road, Ballygunge phari, Kolkata -700019.",
 ];
 
 function NewFooter() {
@@ -46,7 +46,7 @@ function NewFooter() {
         </li>
         <li className="px-16 py-10 sm:px-5">
           <h2 className="text-2xl josefin-sans-500 tracking-wider">
-            Our Branches
+          Corporate Office
           </h2>
           <ul className="text-sm flex justify-start flex-col">
             {locationList.map((location, index) => (
@@ -64,7 +64,7 @@ function NewFooter() {
             Channel Partners
           </h2>
 
-          <ul className="grid grid-cols-2 gap-4">
+          <ul className="grid grid-cols-2 gap-4 pt-3">
             <li>
               <Link href="https://www.promiplastwindows.com/">
                 <Image
