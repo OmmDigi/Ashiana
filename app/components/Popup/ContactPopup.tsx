@@ -70,7 +70,7 @@ function ContactPopup() {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="w-[360px] bg-white rounded-3xl px-9 py-10 relative"
+        className="w-[360px] bg-white rounded-3xl px-9 py-10 relative sm:w-full sm:mx-3"
       >
         <IoCloseOutline
           onClick={closeDialog}
