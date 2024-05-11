@@ -75,12 +75,14 @@ function ProjectsPage({ searchParams }: { searchParams: { catname: string } }) {
           {datas[`${originalCatName}`].map((src: any, index: any) => (
             <li key={index}>
               <OpenShowImageDialgoBtn
-                className="w-full overflow-hidden categoryBorderRedious"
+                className="overflow-hidden categoryBorderRedious bg-gray-200"
                 imgSrc={`/projects/${originalCatName}/${src}`}
               >
                 <Image
                   src={`/projects/${originalCatName}/${src}`}
                   alt=""
+                  placeholder="blur"
+                  blurDataURL="/loading.webp"
                   className="h-[220px] object-cover"
                   width={520}
                   height={362}
