@@ -10,7 +10,8 @@ export const sendContactFormMail = async (info : FormData) => {
     const email = info.get("email");
     const message = info.get("message");
 
-    const sendToEmail = "locbilla@gmail.com";
+    // const sendToEmail = "locbilla@gmail.com";
+    const sendToEmail = "subrata.ash@gmail.com";
     const emailSubject = `Somone Want To Contact With You`;
     const emailBody = `<h5>Query From ashianainteriors.com</h5><h4>Name : ${name}</h4><h4>${address}</h4><h4>Number : ${number}</h4><h4>Email : ${email}</h4><h4>Message : ${message}</h4>`;
 
