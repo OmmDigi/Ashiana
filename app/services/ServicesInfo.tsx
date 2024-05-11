@@ -44,16 +44,17 @@ function ServicesInfo({
                 </h3>
               ) : null}
               <CollepseMenuLayout info={menuinfo} />
-              <Link
-                href="/contact-us"
-                className="font-medium text-[20px] flex items-center gap-2 absolute bottom-0 josefin-sans-400"
+              <span
+                // href="/contact-us"
+                className="font-medium text-[20px] sm:m-4 flex items-center gap-2 absolute bottom-0 josefin-sans-400 sm:static"
               >
-                For {catName} Solutions in Kolkata :
-                <div className="underline flex items-center text-[15px] pt-[5px]">
-                  Contact Us Now
-                  <IoIosArrowRoundBack size={25} className="rotate-180" />
-                </div>
-              </Link>
+                <span>
+                  For {catName} Solutions in Kolkata :{" "}
+                  <Link href="/contact-us" className="underline text-[16px]">
+                    Contact us now
+                  </Link>
+                </span>
+              </span>
             </div>
           </>
         ) : (
@@ -67,16 +68,17 @@ function ServicesInfo({
               ) : null}
 
               <CollepseMenuLayout info={menuinfo} />
-              <Link
-                href="/contact-us"
-                className="font-medium text-[20px] flex items-center gap-2 absolute bottom-0 josefin-sans-400"
+              <span
+                // href="/contact-us"
+                className="font-medium text-[20px] sm:m-4 flex items-center gap-2 absolute bottom-0 josefin-sans-400 sm:static"
               >
-                For {catName} Solutions in Kolkata :
-                <div className="underline flex items-center text-[15px] pt-[5px]">
-                  Contact Us Now
-                  <IoIosArrowRoundBack size={25} className="rotate-180" />
-                </div>
-              </Link>
+                <span>
+                  For {catName} Solutions in Kolkata :{" "}
+                  <Link href="/contact-us" className="underline text-[16px]">
+                    Contact us now
+                  </Link>
+                </span>
+              </span>
             </div>
             <IntersectionObserverComponent
               beforeAnimation="opacity-[0.5] drop-shadow-md"

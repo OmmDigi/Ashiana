@@ -26,7 +26,7 @@ function ShowImageDialog() {
     >
       <div className="size-full relative flexCenter">
         <Image
-          className="w-[600px]"
+          className="w-[600px] sm:w-full"
           src={imgSrc}
           alt=""
           height={1200}
@@ -36,7 +36,7 @@ function ShowImageDialog() {
           onClick={closeDialog}
           size={25}
           color="#fff"
-          className="border-2 p-0 absolute top-5 cursor-pointer right-64"
+          className="border-2 p-0 absolute top-5 cursor-pointer right-64 sm:right-10 sm:top-10"
         />
       </div>
     </div>

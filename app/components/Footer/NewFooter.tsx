@@ -14,8 +14,8 @@ const locationList = [
 function NewFooter() {
   return (
     <footer className="bg-white">
-      <ul className="w-full grid grid-cols-3 text-gray-800">
-        <li className="px-16 py-10 flex items-start flex-col gap-4">
+      <ul className="w-full grid grid-cols-3 text-gray-800 sm:grid-cols-1">
+        <li className="px-16 py-10 flex items-start flex-col gap-4 sm:px-5">
           <Link href="/">
             <Image
               className="w-52"
@@ -44,7 +44,7 @@ function NewFooter() {
             </Link>
           </div>
         </li>
-        <li className="px-16 py-10">
+        <li className="px-16 py-10 sm:px-5">
           <h2 className="text-2xl josefin-sans-500 tracking-wider">
             Our Branches
           </h2>
@@ -59,7 +59,7 @@ function NewFooter() {
             ))}
           </ul>
         </li>
-        <li className="px-16 py-10">
+        <li className="px-16 py-10 sm:px-5">
           <h2 className="text-2xl josefin-sans-500 tracking-wider">
             Channel Partners
           </h2>
