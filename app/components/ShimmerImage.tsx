@@ -6,10 +6,10 @@ import { ImageProps } from "next/image";
 
 interface IProps extends ImageProps {
   imageClass?: string;
-  refferal ? : any;
+  refferal?: any;
 }
 
-const ShimmerImage = (props : IProps) => {
+const ShimmerImage = (props: IProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(false);
 
