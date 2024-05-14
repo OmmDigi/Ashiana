@@ -52,7 +52,7 @@ function BannerImage({ banner_images, currentBannerIndex }: IProps) {
             onComplete: () => {
               setImg1Src(
                 banner_images[
-                  (currentBannerIndex + 1) > banner_images.length - 1
+                  currentBannerIndex + 1 > banner_images.length - 1
                     ? 0
                     : currentBannerIndex + 1
                 ]
@@ -78,7 +78,7 @@ function BannerImage({ banner_images, currentBannerIndex }: IProps) {
             onComplete: () => {
               setImg2Src(
                 banner_images[
-                  (currentBannerIndex + 1) > banner_images.length - 1
+                  currentBannerIndex + 1 > banner_images.length - 1
                     ? 1
                     : currentBannerIndex + 1
                 ]
@@ -102,16 +102,17 @@ function BannerImage({ banner_images, currentBannerIndex }: IProps) {
 
   return (
     <div className="relative size-full overflow-hidden">
-      <Image
-        ref={img1Ref}
+      {/* <ShimmerImage itemRef=""/> */}
+      <ShimmerImage
+        refferal={img1Ref}
         className={`size-full object-cover absolute top-0 bottom-0 bannerImg`}
         src={`/banner/${img1Src}`}
         alt={`Banner 1`}
         height={1200}
         width={1200}
       />
-      <Image
-        ref={img2Ref}
+      <ShimmerImage
+        refferal={img2Ref}
         className={`size-full object-cover absolute top-0 bottom-0 bannerImg opacity-0`}
         src={`/banner/${img2Src}`}
         alt={`Banner 2`}

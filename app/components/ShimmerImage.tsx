@@ -7,9 +7,10 @@ import { BASE_URL } from "@/constant";
 
 interface IProps extends ImageProps {
   imageClass?: string;
+  refferal ? : any;
 }
 
-const ShimmerImage = (props: IProps) => {
+const ShimmerImage = (props : IProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(false);
 
@@ -24,6 +25,7 @@ const ShimmerImage = (props: IProps) => {
 
   return (
     <div
+      ref={props.refferal}
       className={`bg-gray-300 h-25 overflow-hidden object-cover  ${
         props.className
       } ${isLoaded ? "" : "leading-relaxed animate-pulse"}`}
@@ -32,7 +34,7 @@ const ShimmerImage = (props: IProps) => {
         onLoad={handleLoadingComplete}
         onError={handleError}
         {...props}
-        src={error ? `${BASE_URL}/no_image.png` : props.src}
+        src={error ? `` : props.src}
         className={`${
           isLoaded ? "opacity-1" : "opacity-0"
         } transition-all size-full duration-500 object-cover ${
