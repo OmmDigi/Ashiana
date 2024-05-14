@@ -78,7 +78,7 @@ function SpecialServices() {
                     <h2 className="josefin-sans-400 px-4 py-1 pb-2">
                       {item.name}
                     </h2>
-                    <OpenContactPopupBtn className="size-12 bg-white absolute right-0 flexCenter cursor-pointer group/request">
+                    <OpenContactPopupBtn title={`Open Contact Form Button ${index}`} className="size-12 bg-white absolute right-0 flexCenter cursor-pointer group/request">
                       <div className="size-6 bg-gray-800 rounded-full flexCenter group-hover/request:rotate-[360deg] transition-all duration-1000 arrowRotateTransitonTimingFunction">
                         <GoArrowDownLeft className="text-white rotate-180" />
                       </div>
@@ -89,11 +89,11 @@ function SpecialServices() {
             </SwiperSlide>
           ))}
         </Swiper>
-        {/* <button onClick={onPrevBtnClicked} className="size-10 bg-[#00000083] absolute top-[40%] -left-16 z-10 flexCenter cursor-pointer">
+        {/* <button title = "go next" onClick={onPrevBtnClicked} className="size-10 bg-[#00000083] absolute top-[40%] -left-16 z-10 flexCenter cursor-pointer">
           <GrFormNextLink className="rotate-180" size={25} color="#fff" />
         </button>
 
-        <button onClick={onNextBtnClicked} className="size-10 bg-[#00000083] absolute top-[40%] -right-16 z-10 flexCenter cursor-pointer">
+        <button title = "go back" onClick={onNextBtnClicked} className="size-10 bg-[#00000083] absolute top-[40%] -right-16 z-10 flexCenter cursor-pointer">
           <GrFormNextLink size={25} color="#fff" />
         </button> */}
       </div>
