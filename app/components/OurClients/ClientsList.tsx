@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import ShimmerImage from "../ShimmerImage";
 
 export default function ClientsList() {
   const clients = Array.from({ length: 21 }, (_, i) => `${i + 1}.webp`);

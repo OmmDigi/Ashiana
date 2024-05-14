@@ -4,13 +4,15 @@ import ProjectSlider from "./ProjectSlider";
 import ShowCases from "./ShowCases";
 import ContactUs from "../components/ContactUs/ContactUs";
 import { Metadata } from "next";
+import ShimmerImage from "../components/ShimmerImage";
 
 export const metadata: Metadata = {
   title: "About Us | Ashiana Interiors Kolkata",
-  description: "Learn everything about us page for insights into our design philosophy and expertise. Discover Ashiana Interiors Kolkata - Crafting spaces with passion.",
-  alternates : {
-    canonical : "/about-us"
-  }
+  description:
+    "Learn everything about us page for insights into our design philosophy and expertise. Discover Ashiana Interiors Kolkata - Crafting spaces with passion.",
+  alternates: {
+    canonical: "/about-us",
+  },
 };
 
 function page() {
@@ -19,10 +21,10 @@ function page() {
       <div className="w-full relative overflow-hidden h-[32rem] sm:h-[21rem]">
         <Image
           className="size-full object-cover object-left-bottom"
-          src="/banner/banner4.jpg"
+          src="/banner/v1-1.webp"
           alt="banner imag"
-          height={1200}
-          width={12000}
+          height={1980}
+          width={1980}
         />
       </div>
 
@@ -39,24 +41,24 @@ function page() {
           </div>
 
           <div className="w-full">
-            <div className="relative h-[25rem] sm:flex sm:justify-center sm:h-[18rem]">
-              <Image
+            <div className="relative h-[18rem] sm:flex sm:justify-center sm:h-[18rem]">
+              <ShimmerImage
                 className="w-72 absolute"
-                src="/about/image1.jpg"
+                src="/about/sa3.webp"
                 alt="img1"
                 height={1200}
                 width={1200}
               />
-              <Image
-                className="w-72 absolute right-52 top-7 sm:right-0 sm:top-0 sm:hidden"
-                src="/about/image2.jpg"
+              <ShimmerImage
+                className="w-72 absolute right-48 top-3 sm:right-0 sm:top-0 sm:hidden"
+                src="/about/sa8.webp"
                 alt="img2"
                 height={1200}
                 width={1200}
               />
-              <Image
-                className="w-72 absolute right-40 top-16 sm:right-0 sm:top-0 sm:hidden"
-                src="/about/image3.jpg"
+              <ShimmerImage
+                className="w-72 absolute right-40 top-7 sm:right-0 sm:top-0 sm:hidden"
+                src="/about/sa10.webp"
                 alt="img3"
                 height={1200}
                 width={1200}
@@ -93,10 +95,10 @@ function page() {
           </p>
 
           <p className="josefin-sans-400 text-gray-500 tracking-wider sm:mt-10">
-            At Ashiana Interiors Kolkata, we don&apos;t just create interiors; we
-            curate experiences that enrich lives and inspire admiration. Trust
-            us to bring your vision to life and transform your space into a
-            reflection of your unique personality and lifestyle.
+            At Ashiana Interiors Kolkata, we don&apos;t just create interiors;
+            we curate experiences that enrich lives and inspire admiration.
+            Trust us to bring your vision to life and transform your space into
+            a reflection of your unique personality and lifestyle.
           </p>
         </div>
 

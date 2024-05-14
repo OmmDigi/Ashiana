@@ -25,31 +25,35 @@ function About() {
         </Link>
       </div>
 
-      <div className="w-full grid grid-cols-2 py-10 gap-5 sm:grid-cols-1">
-        <div className="relative sm:hidden">
+      <div className="w-full grid grid-cols-2 gap-5 sm:grid-cols-1 pt-10">
+        {/* <div className="relative sm:hidden flexCenter">
           <Image
             className="w-96 absolute"
-            src="/about/image1.jpg"
+            src="/about/1.webp"
             alt="img1"
             height={1200}
             width={1200}
           />
           <Image
-            className="w-96 absolute right-36 top-10"
+            className="w-80 absolute" // right-36 top-10
             src="/about/image2.jpg"
             alt="img2"
             height={1200}
             width={1200}
           />
           <Image
-            className="w-96 absolute right-28 top-20"
+            className="w-72 absolute" //right-28 top-20
             src="/about/image3.jpg"
             alt="img3"
             height={1200}
             width={1200}
           />
-        </div>
+        </div> */}
+
         <AboutTabs />
+        <div className="px-10 flexCenter min-h-[24rem] relative sm:px-0 sm:items-start">
+          <Image src="/about/about.jpg" alt="" width={1280} height={1280} />
+        </div>
       </div>
     </section>
   );

@@ -15,7 +15,7 @@ function FloatingButton() {
 
   return (
     <div className="absolute bottom-14 right-14 z-10 sm:right-5 sm:bottom-6 flexCenter">
-      <button onClick={popUpFormOnClick} className="size-12 bg-black flexCenter">
+      <button title="Show Contact Us Dialog Btn" onClick={popUpFormOnClick} className="size-12 bg-black flexCenter">
         <BiMessageAdd color="#fff" size={20}/>
       </button>
     </div>

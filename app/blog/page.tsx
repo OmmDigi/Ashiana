@@ -5,6 +5,7 @@ import { blogsLists } from "@/datas/blogs";
 import Image from "next/image";
 import Link from "next/link";
 import bloginfo from "@/public/bloginfo.json";
+import ShimmerImage from "../components/ShimmerImage";
 
 function page() {
   return (
@@ -20,7 +21,7 @@ function page() {
           {bloginfo.map((item) => (
             <li key={item.id} className="w-full blogItemShdow">
               <Link href={`/blog/${item.url_key}`}>
-                <Image
+                <ShimmerImage
                   className="h-[12rem] object-cover"
                   src={item.image}
                   alt=""

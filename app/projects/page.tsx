@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { decodeUrl, encodeUrl } from "@/utils/decodeUrl";
 import OpenShowImageDialgoBtn from "../components/Popup/OpenShowImageDialgoBtn";
+import ShimmerImage from "../components/ShimmerImage";
 
 function ProjectsPage({ searchParams }: { searchParams: { catname: string } }) {
   const originalCatName = searchParams.catname || "residential";
@@ -47,7 +48,8 @@ function ProjectsPage({ searchParams }: { searchParams: { catname: string } }) {
   return (
     <main className="w-full flex flex-col items-start pt-[90px]">
       {/* <Navbar className="text-gray-800" /> */}
-      <div className="px-20 sm:px-5">
+      
+      <div className="px-20 sm:px-5 w-full">
         <h2 className="font-tex text-[#073842] leading-[1em] text-8xl mt-3 text-center sm:text-6xl">
           Projects
         </h2>
@@ -71,14 +73,16 @@ function ProjectsPage({ searchParams }: { searchParams: { catname: string } }) {
           ))}
         </ul>
 
-        <ul className="grid grid-cols-3 w-full gap-10 sm:grid-cols-1">
+        <ul className="grid grid-cols-3 flex-grow gap-10 sm:grid-cols-1">
           {datas[`${originalCatName}`].map((src: any, index: any) => (
-            <li key={index}>
+            <li key={index} className={`w-full transition-all duration-500`}>
               <OpenShowImageDialgoBtn
-                className="overflow-hidden categoryBorderRedious bg-gray-200"
+                className="overflow-hidden w-full"
                 imgSrc={`/projects/${originalCatName}/${src}`}
-              >
-                <Image
+              > 
+                 {/* categoryBorderRedious */}
+
+                <ShimmerImage
                   src={`/projects/${originalCatName}/${src}`}
                   alt=""
                   placeholder="blur"
@@ -87,6 +91,15 @@ function ProjectsPage({ searchParams }: { searchParams: { catname: string } }) {
                   width={520}
                   height={362}
                 />
+                {/* <Image
+                  src={`/projects/${originalCatName}/${src}`}
+                  alt=""
+                  placeholder="blur"
+                  blurDataURL="/loading.webp"
+                  className="h-[220px] object-cover"
+                  width={520}
+                  height={362}
+                /> */}
                 {/* <div className="py-3 space-y-4 text-left">
                   <h2 className="font-tex text-xl text-[#073842] tracking-wider">
                     Modern Minimalism

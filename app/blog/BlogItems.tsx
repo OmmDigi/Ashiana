@@ -5,6 +5,7 @@ import { GrNext } from "react-icons/gr";
 import TagItems from "./TagItems";
 import { IBlogsItem } from "@/types/blogs";
 import Link from "next/link";
+import ShimmerImage from "../components/ShimmerImage";
 
 interface IProps {
   item: IBlogsItem;
@@ -14,7 +15,8 @@ function BlogItems({ item }: IProps) {
   return (
     <li className="w-full cursor-pointer">
       <Link href={"./blogs/" + item.route}>
-        <Image src={item.bannerimg} alt="blog-img" width={1280} height={1280} />
+        {/* <Image src={item.bannerimg} alt="blog-img" width={1280} height={1280} /> */}
+        <ShimmerImage className="size-full" src={item.bannerimg} alt="blog-img" width={1280} height={1280}/>
         <h2 className="font-semibold text-xl text-gray-700 text-justify pt-3">
           {item.title}
         </h2>

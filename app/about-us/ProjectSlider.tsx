@@ -23,7 +23,7 @@ function ProjectSlider() {
   const projectsDoneItems = [
     {
       id: "1",
-      img: "/about/imageSlider1.webp",
+      img: "/about/dso1.webp",
       heading: "Customized Solutions",
       description:
         "Tailoring designs to meet the unique needs and preferences of each client, ensuring a truly personalized experience.",
@@ -31,7 +31,7 @@ function ProjectSlider() {
     },
     {
       id: "2",
-      img: "/about/imageSlider2.webp",
+      img: "/about/dh7.webp",
       heading: "Innovative Designs",
       description:
         "Embracing creativity and innovation to deliver fresh and cutting-edge designs that set trends and inspire awe.",
@@ -39,7 +39,7 @@ function ProjectSlider() {
     },
     {
       id: "3",
-      img: "/about/imageSlider3.webp",
+      img: "/about/dh10.webp",
       heading: "Client Satisfaction",
       description:
         "Dedication to exceeding client expectations, with a commitment to delivering exceptional service and creating spaces that evoke joy and satisfaction.",

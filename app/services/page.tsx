@@ -206,10 +206,10 @@ function page() {
       <div className="w-full relative overflow-hidden h-[32rem] sm:h-[21rem]">
         <Image
           className="size-full object-cover object-left-bottom"
-          src="/banner/banner4.jpg"
+          src="/banner/v1-2.webp"
           alt="banner imag"
-          height={1200}
-          width={12000}
+          height={1980}
+          width={1980}
         />
       </div>
       <div className="px-20 py-20 sm:px-5">
@@ -247,42 +247,42 @@ function page() {
             catName={servicesList[0].text}
             topHeading="MODULAR KITCHEN"
             imagePosition="left"
-            imagesrc="https://themes.pixelwars.org/renovatio/demo-01/wp-content/uploads/sites/2/2023/06/modern-living-room-style-1-1300x1280.jpg"
+            imagesrc={"/services/mk.webp"}
             menuinfo={servicesList[0].dropdown}
           />
           <ServicesInfo
             catName={servicesList[1].text}
             topHeading="MODULAR OFFICE"
             imagePosition="right"
-            imagesrc="https://themes.pixelwars.org/renovatio/demo-01/wp-content/uploads/sites/2/2023/06/stylish-compositon-modern-living-room-interior-with-frotte-armchair-sofa-plants-painting-wooden-commode-side-table-elegant-home-accessories-template-copy-spacexa-1300x1280.jpg"
+            imagesrc={"/services/mo.webp"}
             menuinfo={servicesList[1].dropdown}
           />
           <ServicesInfo
             catName={servicesList[2].text}
             topHeading="CHAIR AND SOFA"
             imagePosition="left"
-            imagesrc="https://themes.pixelwars.org/renovatio/demo-01/wp-content/uploads/sites/2/2023/06/stylish-compositon-modern-living-room-interior-with-frotte-armchair-sofa-plants-painting-wooden-commode-side-table-elegant-home-accessories-template-copy-spacexa-1300x1280.jpg"
+            imagesrc="/services/ct.webp"
             menuinfo={servicesList[2].dropdown}
           />
           <ServicesInfo
             catName={servicesList[3].text}
             topHeading="SKYLIGHT DOME"
             imagePosition="right"
-            imagesrc="https://themes.pixelwars.org/renovatio/demo-01/wp-content/uploads/sites/2/2023/06/stylish-compositon-modern-living-room-interior-with-frotte-armchair-sofa-plants-painting-wooden-commode-side-table-elegant-home-accessories-template-copy-spacexa-1300x1280.jpg"
+            imagesrc="/services/sd.webp"
             menuinfo={servicesList[3].dropdown}
           />
           <ServicesInfo
             catName={servicesList[4].text}
             topHeading="STONE ART"
             imagePosition="left"
-            imagesrc="https://themes.pixelwars.org/renovatio/demo-01/wp-content/uploads/sites/2/2023/06/stylish-compositon-modern-living-room-interior-with-frotte-armchair-sofa-plants-painting-wooden-commode-side-table-elegant-home-accessories-template-copy-spacexa-1300x1280.jpg"
+            imagesrc="/services/sa.webp"
             menuinfo={servicesList[4].dropdown}
           />
           <ServicesInfo
             catName={servicesList[5].text}
             topHeading="WATER PROOFING"
             imagePosition="right"
-            imagesrc="https://themes.pixelwars.org/renovatio/demo-01/wp-content/uploads/sites/2/2023/06/stylish-compositon-modern-living-room-interior-with-frotte-armchair-sofa-plants-painting-wooden-commode-side-table-elegant-home-accessories-template-copy-spacexa-1300x1280.jpg"
+            imagesrc="/services/wp.webp"
             menuinfo={servicesList[5].dropdown}
           />
         </div>

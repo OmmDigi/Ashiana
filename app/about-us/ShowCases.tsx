@@ -4,12 +4,15 @@ import OpenShowImageDialgoBtn from "../components/Popup/OpenShowImageDialgoBtn";
 
 function ShowCases() {
   const imageesList = [
-    "/about/showcase1.webp",
-    "/about/showcase2.webp",
-    "/about/showcase3.webp",
-    "/about/showcase4.webp",
-    "/about/showcase5.webp",
-    "/about/showcase6.webp",
+    "/about/dh1.webp",
+    "/about/dh11.webp",
+    "/about/dh12.webp",
+    "/about/dso10.webp",
+    "/about/dso4.webp",
+    "/about/dr10.webp",
+    "/about/dj10.webp",
+    "/about/dr3.webp",
+    "/about/dr6.webp",
   ];
 
   return (
@@ -24,14 +27,14 @@ function ShowCases() {
 
       <ul className="w-full grid grid-cols-3 gap-10 sm:grid-cols-1">
         {imageesList.map((src, index) => (
-          <li key={index} className="w-full h-96 overflow-hidden">
+          <li key={index} className="w-full h-56 overflow-hidden">
             <OpenShowImageDialgoBtn imgSrc={src} className="size-full object-cover cursor-pointer hover:scale-105 transition-all duration-300">
               <Image
                 className="size-full object-cover cursor-pointer hover:scale-105 transition-all duration-300"
                 src={src}
                 alt={`img ${index + 1}`}
-                height={1200}
-                width={1200}
+                height={1980}
+                width={1980}
               />
             </OpenShowImageDialgoBtn>
           </li>

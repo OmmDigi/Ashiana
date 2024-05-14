@@ -16,7 +16,7 @@ function BlogHeading({
 }) {
   return (
     <>
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-6 flex-wrap sm:pt-5">
         <div className="flex items-center gap-1">
           <span className="pb-[0.28rem]">
             <CiCalendarDate color="#8E7FE9" size={18} />

@@ -17,7 +17,7 @@ export default function Navbar({ isRestrictedPath, needToChnageHeaderBg, classNa
       className={`w-full text-[#ffffffe1] drop-shadow-2xl flex items-center justify-center h-[90px]  ${className}`}
     >
       <div className="w-[80%] h-full flex items-center border-b border-[#ffffff6b] sm:w-full sm:px-5">
-        <Link className="sm:flex-grow" href="/">
+        <Link aria-label="ashiana interiors logo" className="sm:flex-grow" href="/">
           <Image className="w-40" src={needToChnageHeaderBg ? "/black_logo.webp" : isRestrictedPath() ? "/black_logo.webp" : "/logo.webp"} alt="" height={1200} width={1200}/>
         </Link>
 

@@ -5,6 +5,7 @@ import MainBannerImgae from "./MainBannerImgae";
 import Image from "next/image";
 import blogInfo from "@/public/bloginfo.json";
 import Link from "next/link";
+import ShimmerImage from "../components/ShimmerImage";
 
 interface IProps {
   blogId: string;
@@ -54,7 +55,7 @@ function ReadBlogLayot({
               {relatedBlogs.map((blogInfo) => (
                 <li key={blogInfo.id} className="relative overflow-hidden rounded-lg min-h-48">
                   <Link href={`/blog/${blogInfo.url_key}`}>
-                  <Image
+                  <ShimmerImage
                     className="object-cover size-full min-h-48"
                     alt=""
                     src={blogInfo.image}

@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import React, { use, useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import ShimmerImage from "../ShimmerImage";
 
 interface IProps {
   banner_images: string[];

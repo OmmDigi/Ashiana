@@ -11,10 +11,10 @@ import BannerText from "./BannerText";
 export default function Banner() {
   const [currentBannerIndex, setCurretBannerIndex] = useState(0);
   const banner_images = [
-    "banner1.jpg",
-    "banner2.jpg",
-    "banner3.jpg",
-    "banner4.jpg",
+    "banner1.webp",
+    "banner2.webp",
+    "banner3.webp",
+    "banner4.webp",
   ];
 
   const banner_texts = [
