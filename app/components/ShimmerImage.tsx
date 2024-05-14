@@ -3,7 +3,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { ImageProps } from "next/image";
-import { BASE_URL } from "@/constant";
 
 interface IProps extends ImageProps {
   imageClass?: string;
