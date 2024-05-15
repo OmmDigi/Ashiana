@@ -58,7 +58,7 @@ function Testimonial() {
         {testimonials.map((item, index) => (
           <SwiperSlide className="overflow-auto" key={index}>
             <div className="mt-20 mb-20">
-              <div className="w-full bg-[#5784C0] flex flex-col items-center testimonialBorderRedious">
+              <div className="w-full bg-[#355888] flex flex-col items-center testimonialBorderRedious">
                 <div className="size-28 rounded-full bg-white -translate-y-10 overflow-hidden p-3">
                   <Image
                     className="size-full object-cover"
@@ -69,7 +69,7 @@ function Testimonial() {
                   />
                 </div>
                 <div className="px-5 pb-9">
-                  <h3 className="josefin-sans-500 text-gray-200 text-center text-lg">
+                  <h3 className="josefin-sans-500 text-white text-center text-lg">
                     {item.name}
                   </h3>
 
