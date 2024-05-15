@@ -105,7 +105,7 @@ function BannerImage({ banner_images, currentBannerIndex }: IProps) {
       <Image
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         ref={img1Ref}
-        className={`object-cover absolute top-0 bottom-0 bannerImg`}
+        className={`size-full object-cover absolute top-0 bottom-0 bannerImg`}
         src={`/banner/${img1Src}`}
         alt={`Banner 1`}
         loading="eager"
@@ -113,7 +113,7 @@ function BannerImage({ banner_images, currentBannerIndex }: IProps) {
       <Image
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         ref={img2Ref}
-        className={`object-cover absolute top-0 bottom-0 bannerImg opacity-0`}
+        className={`size-full object-cover absolute top-0 bottom-0 bannerImg opacity-0`}
         src={`/banner/${img2Src}`}
         alt={`Banner 2`}
         loading="eager"
