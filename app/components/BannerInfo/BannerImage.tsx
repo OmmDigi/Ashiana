@@ -108,6 +108,7 @@ function BannerImage({ banner_images, currentBannerIndex }: IProps) {
         className={`size-full object-cover absolute top-0 bottom-0 bannerImg`}
         src={`/banner/${img1Src}`}
         alt={`Banner 1`}
+        fill
         loading="eager"
       />
       <Image
@@ -116,6 +117,7 @@ function BannerImage({ banner_images, currentBannerIndex }: IProps) {
         className={`size-full object-cover absolute top-0 bottom-0 bannerImg opacity-0`}
         src={`/banner/${img2Src}`}
         alt={`Banner 2`}
+        fill
         loading="eager"
       />
     </div>
