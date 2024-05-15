@@ -103,21 +103,23 @@ function BannerImage({ banner_images, currentBannerIndex }: IProps) {
   return (
     <div className="relative size-full overflow-hidden">
       {/* <ShimmerImage itemRef=""/> */}
-      <ShimmerImage
-        sizes="(max-width: 600px) 480px, 1200px"
-        refferal={img1Ref}
+      <Image
+        sizes="(max-width: 639px) 50vw, 100vw"
+        ref={img1Ref}
         className={`size-full object-cover absolute top-0 bottom-0 bannerImg`}
         src={`/banner/${img1Src}`}
         alt={`Banner 1`}
         fill
+        loading="eager"
       />
-      <ShimmerImage
-        sizes="(max-width: 600px) 480px, 1200px"
-        refferal={img2Ref}
+      <Image
+        sizes="(max-width: 639px) 50vw, 100vw"
+        ref={img2Ref}
         className={`size-full object-cover absolute top-0 bottom-0 bannerImg opacity-0`}
         src={`/banner/${img2Src}`}
         alt={`Banner 2`}
         fill
+        loading="eager"
       />
     </div>
   );

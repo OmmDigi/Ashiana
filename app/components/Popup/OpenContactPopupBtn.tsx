@@ -10,10 +10,10 @@ interface IProps extends ButtonType {
   className ? : string, children: React.ReactNode
 }
 
-function OpenContactPopupBtn({ className, children }: IProps) {
+function OpenContactPopupBtn({ className, children, title }: IProps) {
   const despatch = useDispatch();
   return (
-    <button className={className} onClick={() => despatch(setPopupDilaogVisibility(true))}>
+    <button title={title} className={className} onClick={() => despatch(setPopupDilaogVisibility(true))}>
       {children}
     </button>
   );

@@ -14,19 +14,21 @@ function MyProvider({ children }: { children: React.ReactNode }) {
   const scrollbarRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div
-      ref={scrollbarRef}
-      className="h-screen overflow-hidden overflow-y-scroll max-w-[1500px] mx-auto"
-    >
-      <Provider store={store}>
-        <ContactPopup />
-        <FloatingButton />
-        <ShowImageDialog />
-        <Navbarholder pReferral={scrollbarRef} />
-        {children}
-        <NewFooter />
-      </Provider>
-    </div>
+    <>
+      <div
+        ref={scrollbarRef}
+        className="h-screen overflow-hidden overflow-y-scroll max-w-[1500px] mx-auto"
+      >
+        <Provider store={store}>
+          <ContactPopup />
+          <FloatingButton />
+          <ShowImageDialog />
+          <Navbarholder pReferral={scrollbarRef} />
+          {children}
+          <NewFooter />
+        </Provider>
+      </div>
+    </>
   );
 }
 

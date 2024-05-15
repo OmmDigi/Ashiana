@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
 
 const roboto = Roboto({ subsets: ["latin"], weight: "400" });
 import local from "next/font/local";
 import MyProvider from "./MyProvider";
+
+const josefin = Josefin_Sans({subsets : ["latin"], weight : "400", variable : "--josefin-400"});
 
 const tex = local({
   src: [
@@ -42,16 +45,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body
-        className={`${roboto.className} ${tex.variable} ${texReg.variable} overflow-y-hidden`}
+        className={`${roboto.className} ${tex.variable} ${texReg.variable} ${josefin.variable} overflow-y-hidden`}
       >
         <MyProvider>{children}</MyProvider>
       </body>
