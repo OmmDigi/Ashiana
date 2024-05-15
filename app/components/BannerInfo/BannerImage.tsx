@@ -2,9 +2,8 @@
 
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
-import React, { use, useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import gsap from "gsap";
-import ShimmerImage from "../ShimmerImage";
 
 interface IProps {
   banner_images: string[];
@@ -104,26 +103,20 @@ function BannerImage({ banner_images, currentBannerIndex }: IProps) {
     <div className="relative size-full overflow-hidden">
       {/* <ShimmerImage itemRef=""/> */}
       <Image
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         ref={img1Ref}
         className={`object-cover absolute top-0 bottom-0 bannerImg`}
         src={`/banner/${img1Src}`}
         alt={`Banner 1`}
         loading="eager"
-        layout="fill"
-        objectFit="cover"
-        priority={true} // Since it's a banner and likely above-the-fold
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
       <Image
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         ref={img2Ref}
         className={`object-cover absolute top-0 bottom-0 bannerImg opacity-0`}
         src={`/banner/${img2Src}`}
         alt={`Banner 2`}
         loading="eager"
-        layout="fill"
-        objectFit="cover"
-        priority={true} // Since it's a banner and likely above-the-fold
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
     </div>
   );
