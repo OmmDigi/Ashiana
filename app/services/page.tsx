@@ -1,13 +1,7 @@
 import React from "react";
-import Navbar from "../components/Navbar/Navbar";
 import Image from "next/image";
 import Link from "next/link";
-import { MdOutlineAdd } from "react-icons/md";
-import { IoMdAdd } from "react-icons/io";
-import CollepseMenuItem from "./CollepseMenuItem";
-import CollepseMenuLayout from "./CollepseMenuLayout";
 import ServicesInfo from "./ServicesInfo";
-import Footer from "../components/Footer/Footer";
 import { GiWeightLiftingDown } from "react-icons/gi";
 
 

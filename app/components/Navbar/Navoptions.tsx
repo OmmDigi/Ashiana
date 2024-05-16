@@ -7,6 +7,8 @@ import { HiMiniBuildingOffice2 } from "react-icons/hi2";
 import { GiSofa } from "react-icons/gi";
 import { GiStonePile } from "react-icons/gi";
 import { FaHandHoldingWater } from "react-icons/fa";
+import { FaRegLightbulb } from "react-icons/fa";
+
 
 interface IProps {
   optionname: string;
@@ -19,6 +21,7 @@ function Navoptions({ optionname, href }: IProps) {
     <FaKitchenSet key={"FaKitchenSet"}/>,
     <HiMiniBuildingOffice2 key={"HiMiniBuildingOffice2"}/>,
     <GiSofa key={"GiSofa"}/>,
+    <FaRegLightbulb key={"Skylight"}/>,
     <GiStonePile key={"GiStonePile"}/>,
     <FaHandHoldingWater key={"FaHandHoldingWater"}/>,
   ];

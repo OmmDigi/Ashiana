@@ -4,6 +4,7 @@ export const servicesList = [
     { link: "/services/modular-kitchen", text: "MODULAR KITCHEN" },
     { link: "/services/modular-office", text: "MODULAR OFFICE" },
     { link: "/services/chair-and-sofa", text: "CHAIR AND SOFA" },
+    { link: "/services/skylight-dome", text: "SKYLIGHT DOME" },
     { link: "/services/stone-art", text: "STONE ART" },
     { link: "/services/water-proofing", text: "WATER PROOFING" },
   ];

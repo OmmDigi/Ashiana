@@ -2,8 +2,9 @@ import Image from "next/image";
 import React from "react";
 import CollepseMenuLayout from "./CollepseMenuLayout";
 import IntersectionObserverComponent from "../components/IntersectionObserverComponent";
-import { IoIosArrowRoundBack } from "react-icons/io";
+import { IoIosArrowRoundBack, IoMdArrowDown } from "react-icons/io";
 import Link from "next/link";
+import { decodeUrl, encodeUrl } from "@/utils/decodeUrl";
 
 interface IProps {
   catName?: string;
@@ -39,9 +40,19 @@ function ServicesInfo({
               > */}
               <a id={catName?.replaceAll(" ", "_")}></a>
               {topHeading ? (
-                <h3 className="text-[1.5rem] text-center pb-8 josefin-sans-400 text-[#073842] sm:text-[1.4rem]">
-                  {topHeading}
-                </h3>
+                <div className="w-full flex items-center justify-between pb-5">
+                  <h3 className="text-[1.5rem] josefin-sans-400 text-[#073842] sm:text-[1.4rem]">
+                    {topHeading}
+                  </h3>
+                  <Link
+                    className="josefin-sans-400 flex items-center gap-2 group/allserviceslbl relative sm:mt-4"
+                    href={`/services/${encodeUrl(catName || "")}`}
+                  >
+                    <span>Explore more</span>
+                    <div className="border-b-[1.8px] border-[#07384286] w-full absolute bottom-0 left-0 group-hover/allserviceslbl:w-0 transition-all duration-500"></div>
+                    <IoMdArrowDown className="-rotate-[130deg]" size={20} />
+                  </Link>
+                </div>
               ) : null}
               <CollepseMenuLayout info={menuinfo} />
               <span
@@ -62,9 +73,19 @@ function ServicesInfo({
             <div className={`w-full px-14 sm:px-0 relative`}>
               <a id={catName?.replaceAll(" ", "_")}></a>
               {topHeading ? (
-                <h3 className="text-[1.5rem] text-center pb-8 josefin-sans-400 text-[#073842] sm:text-[1.4rem]">
-                  {topHeading}
-                </h3>
+                <div className="w-full flex items-center justify-between pb-5">
+                  <h3 className="text-[1.5rem] josefin-sans-400 text-[#073842] sm:text-[1.4rem]">
+                    {topHeading}
+                  </h3>
+                  <Link
+                    className="josefin-sans-400 flex items-center gap-2 group/allserviceslbl relative sm:mt-4"
+                    href={`/services/${encodeUrl(catName || "")}`}
+                  >
+                    <span>Explore more</span>
+                    <div className="border-b-[1.8px] border-[#07384286] w-full absolute bottom-0 left-0 group-hover/allserviceslbl:w-0 transition-all duration-500"></div>
+                    <IoMdArrowDown className="-rotate-[130deg]" size={20} />
+                  </Link>
+                </div>
               ) : null}
 
               <CollepseMenuLayout info={menuinfo} />

@@ -9,6 +9,7 @@ import P from "../blog/P";
 import FAQ from "../components/FAQ";
 import SubHeading from "../blog/SubHeading";
 import { encodeUrl } from "@/utils/decodeUrl";
+import ShimmerImage from "../components/ShimmerImage";
 
 interface IProps {
   topheading : string;
@@ -55,7 +56,8 @@ export default function EachServiceLayout(props: IProps) {
 
       <div className="flex items-start px-10 py-10 sm:flex-col sm:px-5">
         <section className="w-[70%] sm:w-full">
-          <Image
+          <ShimmerImage
+            className="h-[32rem] object-center"
             alt="images"
             src={props.blogimage}
             width={1280}
@@ -91,7 +93,7 @@ export default function EachServiceLayout(props: IProps) {
             )}
           </div>
           <OpenContactPopupBtn>
-            <Image
+            <ShimmerImage
               className="mt-6"
               src="/services/sidebanner.webp"
               alt=""

@@ -36,70 +36,59 @@ export default function page({ params }: IProps) {
   const faqs = [
     {
       question:
-        "What exactly is a modular kitchen, and how does it differ from a traditional kitchen?",
+        "What makes Ashiana Interiors the best choice for chair and sofa design in Kolkata?",
       answer:
-        "A modular kitchen is a modern, pre-designed kitchen layout that consists of standardized units or modules. These modules, such as cabinets, drawers, shelves, and countertops, are manufactured off-site and assembled on-site. Unlike traditional kitchens, modular kitchens offer greater flexibility, customization options, and efficient space utilization.",
+        "Ashiana Interiors stands out for its commitment to excellence in design, craftsmanship, and customer satisfaction. Our team of experienced designers creates bespoke chair and sofa designs tailored to each client's unique style and preferences, ensuring unparalleled quality and comfort.",
     },
     {
       question:
-        "What are the key benefits of choosing a modular kitchen design for my home?",
+        "Can Ashiana Interiors customize chair and sofa designs to suit my specific requirements?",
       answer: `
-      
-      Modular kitchens offer several advantages, including: <br /><br />
-      <ul class = "space-y-2 list-decimal pl-3">
-       <li>Efficient space utilization: Modular designs maximize available space, making them ideal for small or irregularly shaped kitchens.</li>
-       <li>Customization: Clients can choose from a wide range of designs, finishes, and accessories to create a kitchen that reflects their personal style and functional needs.</li>
-       <li>Easy installation: As modular kitchens are pre-fabricated, installation is quicker and less disruptive compared to traditional kitchen renovations.</li>
-       <li>Durability and functionality: Modular kitchen components are made from high-quality materials, ensuring durability and ease of maintenance.</li>
-       <li>Future-proofing: Modular kitchens can be easily modified or expanded in the future to accommodate changing needs or preferences.</li>
-      </ul>
+      Absolutely! At Ashiana Interiors, customization is at the heart of what we do. We work closely with our clients to understand their needs and preferences, offering a wide range of customization options including fabric selection, size adjustments, and ergonomic features. Your satisfaction is our top priority.
       `,
     },
     {
       question:
-        "How does Ashiana Interiors ensure that their modular kitchens are both aesthetically pleasing and functional?",
+        "How does Ashiana Interiors ensure the quality of its chair and sofa designs?",
       answer:
-        "At Ashiana Interiors, we prioritize a holistic approach to design, focusing on both form and function. Our team of experienced designers collaborates closely with clients to understand their requirements, lifestyle, and aesthetic preferences. We meticulously plan every aspect of the kitchen layout, ensuring seamless integration of appliances, storage solutions, and ergonomic features. The result is a modular kitchen that not only looks stunning but also enhances efficiency and convenience in daily use.",
+        "Quality is our utmost priority at Ashiana Interiors. We source premium materials from trusted suppliers and employ skilled craftsmen who meticulously handcraft each piece to perfection. Our rigorous quality control process ensures that every chair and sofa meets our exacting standards for durability, comfort, and aesthetics.",
     },
     {
       question:
-        "Are modular kitchens suitable for all types of homes and budgets?",
+        "What sets Ashiana Interiors' chair and sofa designs apart from others in the market?",
       answer:
-        "Yes, modular kitchens can be customized to suit a wide range of home sizes, layouts, and budgets. At Ashiana Interiors, we offer flexible design options to accommodate diverse needs and preferences. Whether you live in a compact apartment or a spacious villa, our modular kitchen solutions can be tailored to maximize space utilization and functionality while adhering to your budget constraints.",
+        "Our chair and sofa designs are distinguished by their timeless elegance, superior comfort, and attention to detail. Whether you prefer classic sophistication or contemporary flair, our designs seamlessly blend style with functionality to elevate any space. With Ashiana Interiors, you can expect nothing less than excellence in every aspect.",
     },
     {
       question:
-        "What sets Ashiana Interiors apart from other modular kitchen brands?",
+        "How can I experience the luxury of Ashiana Interiors' chair and sofa designs?",
       answer:
-        "Ashiana Interiors distinguishes itself through a combination of innovation, craftsmanship, and a customer-centric approach. Our designs blend contemporary style with practicality, catering to the unique requirements of each client. We prioritize quality and sustainability, using eco-friendly materials and practices wherever possible. From initial consultation to final installation, our dedicated team ensures a seamless and rewarding experience for every client, making us the preferred choice for discerning homeowners seeking excellence in modular kitchen design.",
+        "We invite you to visit our showroom in Kolkata to explore our exquisite collection of chair and sofa designs firsthand. Our knowledgeable staff will be delighted to assist you in finding the perfect pieces to complement your home or office. Alternatively, you can schedule a consultation with one of our designers to discuss your specific requirements and preferences. Experience the epitome of luxury with Ashiana Interiors today!",
     },
   ];
 
   return (
-    // <EachServiceLayout
-    //   blogheading="The Best Modular Office Designer in Kolkata"
-    //   blogimage="/services/chair-and-sofa-blog-banner.webp"
-    //   faqs={faqs}
-    //   servicesList={servicesList}
-    //   servicename="chair and sofa"
-    //   topheading="The Best Modular Office Designer in Kolkata"
-    //   topimage="https://wdtthemes.kinsta.cloud/mezan/wp-content/uploads/sites/4/2024/03/main-breacrumb-Image.jpg"
-    // >
-    //   <P text="Transforming a mundane office space into a dynamic and efficient workspace is an art, and Ashiana Interiors in Kolkata has mastered it impeccably. With their innovative designs, impeccable craftsmanship, and commitment to excellence, Ashiana Interiors stands out as the premier choice for modular office design in Kolkata." />
+    <EachServiceLayout
+      blogheading="Best Chair & Sofa Designer In Kolkata"
+      blogimage="/services/chair-and-sofa-blog-banner.webp"
+      faqs={faqs}
+      servicesList={servicesList}
+      servicename="chair and sofa"
+      topheading="Best Chair & Sofa Designer In Kolkata"
+      topimage="https://wdtthemes.kinsta.cloud/mezan/wp-content/uploads/sites/4/2024/03/main-breacrumb-Image.jpg"
+    >
+      <P text="When it comes to creating a space that exudes luxury, comfort, and style, Ashiana Interiors in Kolkata sets the standard as the ultimate destination for chair and sofa design. Renowned for their impeccable craftsmanship, innovative designs, and dedication to client satisfaction, Ashiana Interiors stands out as the best in the business." />
 
-    //   <P text="1. Innovative Designs: At Ashiana Interiors, every project begins with a blank canvas and a vision to create a workspace that not only meets the functional requirements but also inspires creativity and productivity. Their team of talented designers brings forth innovative concepts tailored to the specific needs and preferences of each client. Whether it's a sleek, modern aesthetic or a more traditional ambiance, Ashiana Interiors excels in delivering designs that exceed expectations."/>
+      <P text="1. Exquisite Designs: Ashiana Interiors' collection of chairs and sofas is a testament to their commitment to excellence in design. From sleek and contemporary to timeless and classic, their furniture pieces are crafted with meticulous attention to detail and an eye for aesthetic appeal. Each design is carefully curated to elevate the ambiance of any space and make a statement of luxury and sophistication."/>
 
-    //   <P text="2. Customization: Recognizing that every office space is unique, Ashiana Interiors offers a high level of customization to ensure that the design perfectly aligns with the client's vision and brand identity. From layout planning to selecting furniture and accessories, every aspect is meticulously curated to create a cohesive and harmonious environment that fosters collaboration and efficiency." />
-    //   <P text="3. Quality Craftsmanship: Quality is paramount at Ashiana Interiors. They source materials from trusted suppliers and employ skilled craftsmen who pay attention to every detail, ensuring that the final product is not only visually stunning but also built to last. From premium-grade furniture to precision-engineered modular fixtures, every element is crafted with precision and care."/>
+      <P text="2. Bespoke Customization: At <a class = 'linkStyle' href = '/'>Ashiana Interiors</a>, they understand that every client has unique preferences and requirements. That's why they offer bespoke customization options for their chairs and sofas. From selecting the finest fabrics to choosing the perfect finishes, clients have the freedom to tailor their furniture pieces to reflect their individual style and personality, ensuring a truly personalized experience." />
+      <P text="3. Craftsmanship Excellence: Quality is the cornerstone of Ashiana Interiors' philosophy. They source the highest quality materials and work with skilled artisans who possess a mastery of their craft. Each chair and sofa is crafted with precision and care, using time-honored techniques to ensure durability, comfort, and longevity."/>
 
-    //   <GridImage images={["/services/chair-and-sofa-1.webp", "/services/chair-and-sofa-2.webp"]}/>
+      <GridImage images={["/services/chair-and-sofa-1.webp", "/services/chair-and-sofa-2.webp"]}/>
 
-    //   <P text="4. Functional Efficiency: In today's fast-paced business world, functionality is key. Ashiana Interiors specializes in optimizing space utilization and workflow efficiency. Their designs prioritize ergonomics and practicality, creating workspaces that are conducive to productivity and well-being. From intelligent storage solutions to ergonomic furniture layouts, every aspect is thoughtfully designed to enhance the overall user experience." />
-    //   <P text="5. Client-Centric Approach: <a class = 'linkStyle' href = '/'>Ashiana Interiors</a> believes in forging long-term relationships with its clients based on trust, transparency, and reliability. They collaborate closely with clients throughout the design and implementation process, ensuring that their needs are met at every stage. From initial concept development to final installation, Ashiana Interiors strives to exceed client expectations and deliver exceptional results." />
-    //   <P text="In conclusion, Ashiana Interiors stands out as the best modular office designer in Kolkata, offering innovative designs, customization, quality craftsmanship, functional efficiency, and a client-centric approach. Whether you're looking to revamp your existing office space or create a brand new one from scratch, Ashiana Interiors is your trusted partner in bringing your vision to life. Elevate your workspace with Ashiana Interiors and experience the difference firsthand." />
-    // </EachServiceLayout>
-    <div className="size-full flexCenter">
-      <h2 className="text-center text-3xl">Coming Soon</h2>
-    </div>
+      <P text="4. Luxurious Comfort: Comfort is not compromised in Ashiana Interiors' pursuit of elegance and style. Their chairs and sofas are designed with the utmost comfort in mind, featuring plush cushions, ergonomic designs, and ample support. Whether you're relaxing with a book or entertaining guests, you can sink into luxury and unwind in style with Ashiana Interiors' furniture pieces." />
+      <P text="5. Unparalleled Client Satisfaction: Ashiana Interiors is dedicated to exceeding client expectations at every turn. From the initial consultation to the final installation, they prioritize clear communication, attention to detail, and superior service. Clients can trust Ashiana Interiors to deliver furniture that not only meets but surpasses their expectations, creating spaces that are as functional as they are beautiful." />
+      <P text="In summary, Ashiana Interiors stands as the epitome of luxury and sophistication in chair and sofa design in Kolkata. With their exquisite designs, bespoke customization options, craftsmanship excellence, luxurious comfort, and unwavering commitment to client satisfaction, Ashiana Interiors sets the standard for unparalleled elegance and style. Indulge in luxury and elevate your space with Ashiana Interiors today." />
+    </EachServiceLayout>
   );
 }
