@@ -18,7 +18,7 @@ export default function Banner() {
   ];
 
   const banner_texts = [
-    "Designing interiors <br /> inspiring lifestyles.",
+    "Designing interiors <br /> <p class='paddingTop30'>inspiring lifestyles.</p>",
     "Your vision, our expertise.",
     "Discover the Art of Living",
     "Creating Harmony Through Design",
