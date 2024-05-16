@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description:
     "Elevate your space with Ashiana Interiors, Kolkata's best interior designer. Discover home interior design, office interior design, modular kitchen & more.",
   alternates: {
-    canonical: "/services/modular-kitchen",
+    canonical: "/services/chair-and-sofa",
   },
 };
 
