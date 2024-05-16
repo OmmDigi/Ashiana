@@ -48,7 +48,7 @@ function Navoptions({ optionname, href }: IProps) {
             {optionname}
           </p>
           {optionname === "Services" ? (
-            <ul className="min-w-96 bg-white hidden sm:group-hover/navoption:hidden grid-cols-1 gap-5 px-8 py-5 navItemClipPath absolute -top-20 left-36">
+            <ul className="min-w-96 bg-white hidden sm:group-hover/navoption:grid grid-cols-1 gap-5 px-8 py-5 navItemClipPath absolute -top-20 left-36">
               {servicesList.map((service, index) => (
                 <li key={index} className="text-gray-900 text-xs hover:text-[#f5deb3] ">
                   <Link className="flex items-center gap-2" href={service.link}>
@@ -62,7 +62,7 @@ function Navoptions({ optionname, href }: IProps) {
         </div>
 
         {optionname === "Services" ? (
-          <ul className="min-w-96 bg-white absolute grid grid-cols-2 top-[5.6rem] scale-0 opacity-0 group-hover/navoption:scale-0 group-hover/navoption:opacity-100 gap-5 px-8 py-5 navItemClipPath transition-all duration-300 sm:hidden">
+          <ul className="min-w-96 bg-white absolute grid grid-cols-2 top-[5.6rem] scale-0 opacity-0 group-hover/navoption:scale-100 group-hover/navoption:opacity-100 gap-5 px-8 py-5 navItemClipPath transition-all duration-300 sm:hidden">
             {servicesList.map((service, index) => (
               <li key={index} className="text-gray-900 text-xs hover:text-[#f5deb3] ">
                 <Link className="flex items-center gap-2" href={service.link}>

@@ -6,7 +6,7 @@ function SubHeading({
   text,
 }: {
   className?: string;
-  type?: "H3" | "H4";
+  type?: "H1" | "H3" | "H4";
   text: string;
 }) {
   const ComponentToLoad = ({ text }: { text: string }) => {
@@ -26,6 +26,15 @@ function SubHeading({
           {text}
         </h4>
       );
+
+      if (type === "H1")
+        return (
+          <h1
+            className={`font-tex text-gray-800 text-xl mt-8 uppercase ${className}`}
+          >
+            {text}
+          </h1>
+        );
 
     return (
       <h2

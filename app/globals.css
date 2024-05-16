@@ -192,6 +192,10 @@ td {
   animation-direction: alternate;
 }
 
+.linkStyle {
+  color: rgb(0, 110, 255);
+}
+
 @keyframes pandulam {
   0%{
     transform: rotate(-12deg);

@@ -30,7 +30,7 @@ function NavMenu() {
       <nav
         className={`flex-grow font-[600] h-full flex overflow-hidden ${
           mobileNavVisibility ? "sm:flex sm:py-5" : "sm:hidden sm:py-0"
-        } items-center gap-7 justify-end josefin-sans-500 sm:absolute sm:flex-col sm:bg-[#ffffffef] sm:right-0 sm:text-black sm:top-[90px] sm:h-auto sm:w-full sm:items-start sm:gap-5 sm:px-6 sm:drop-shadow-2xl sm:transition-all duration-1000`}
+        } items-center gap-7 justify-end josefin-sans-500 sm:absolute sm:flex-col sm:bg-[#ffffffef] sm:right-0 sm:text-black sm:top-[90px] sm:h-auto sm:w-full sm:items-start sm:gap-5 sm:px-6 sm:drop-shadow-2xl sm:transition-all duration-250`}
       >
         <Navoptions optionname="Home" href="/" />
         <Navoptions optionname="About Us" href="/about-us" />
