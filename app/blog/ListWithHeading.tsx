@@ -12,7 +12,7 @@ export default function ListWithHeading({ className, options }: IProps) {
     <ul className={`w-full py-9 ${className}`}>
       {options.map((item, key) => (
         <li key={key} className="">
-          <SubHeading text={item.heading} />
+          <SubHeading className={`${key === 0 ? "mt-[0px]" : ""} text-[14px] text-[#755dff] tracking-widest`} text={item.heading} />
           <P className="mt-[5px]" text={item.text} />
           {/* {<ComponentToLoad text={item} />} */}
         </li>

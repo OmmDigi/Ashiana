@@ -28,11 +28,11 @@ const Navbarholder = ({ pReferral }: IProps) => {
 
       if (currentScrollPosition > 0) {
         // if (!needToChnageHeaderBg) {
-          setNeedToChnageHeaderBg(true);
+        setNeedToChnageHeaderBg(true);
         // }
       } else {
         // if (needToChnageHeaderBg) {
-          setNeedToChnageHeaderBg(false);
+        setNeedToChnageHeaderBg(false);
         // }
       }
     };
@@ -44,11 +44,21 @@ const Navbarholder = ({ pReferral }: IProps) => {
 
   return (
     <header
-      className={`w-full backdrop-blur-md absolute z-10 top-0  ${
-        needToChnageHeaderBg ? "bg-[#ffffffb4]" : ""
+      className={`w-full  absolute z-10 top-0 backdrop-blur-md ${
+        needToChnageHeaderBg ? " bg-[#ffffffd3]" : isRestrictedPath() ? "bg-[#ffffffd3] text-gray-800" : "text-gray-800"
       } transition-all duration-500`}
     >
-      <Navbar isRestrictedPath={isRestrictedPath} needToChnageHeaderBg = {needToChnageHeaderBg} className={needToChnageHeaderBg ? "text-gray-800" : isRestrictedPath() ? "text-gray-800" : "text-white"} />
+      <Navbar
+        isRestrictedPath={isRestrictedPath}
+        needToChnageHeaderBg={needToChnageHeaderBg}
+        className={
+          needToChnageHeaderBg
+            ? "text-gray-800"
+            : isRestrictedPath()
+            ? "text-gray-800"
+            : "text-white"
+        }
+      />
     </header>
   );
 };

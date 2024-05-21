@@ -21,7 +21,7 @@ function page() {
               <li key={bloginfo[currentIndex].id} className="w-full blogItemShdow">
                 <Link href={`/blog/${bloginfo[currentIndex].url_key}`}>
                   <ShimmerImage
-                    className="h-[12rem] object-cover"
+                    className="h-[12rem] object-cover navItemClipPath"
                     src={bloginfo[currentIndex].image}
                     alt=""
                     height={1200}

@@ -53,7 +53,7 @@ function ReadBlogLayot({
           ) : (
             <ul className="my-4 space-y-7">
               {relatedBlogs.map((blogInfo) => (
-                <li key={blogInfo.id} className="relative overflow-hidden rounded-lg min-h-48">
+                <li key={blogInfo.id} className="relative overflow-hidden rounded-lg min-h-48 navItemClipPath">
                   <Link href={`/blog/${blogInfo.url_key}`}>
                   <ShimmerImage
                     className="object-cover size-full min-h-48"
