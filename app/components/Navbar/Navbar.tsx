@@ -1,7 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import Navoptions from "./Navoptions";
-import { RxHamburgerMenu } from "react-icons/rx";
 import NavMenu from "./NavMenu";
 import Image from "next/image";
 

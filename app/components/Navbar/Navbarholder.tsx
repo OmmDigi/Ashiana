@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import { usePathname } from "next/navigation";
+import { nav_options } from "@/constant";
 
 interface IProps {
   pReferral: React.RefObject<HTMLDivElement>;
@@ -13,7 +14,9 @@ const Navbarholder = ({ pReferral }: IProps) => {
   const pathname = usePathname();
 
   const isRestrictedPath = () => {
-    if (pathname.includes("projects") || pathname.includes("blog")) {
+    const value = nav_options.find((value) => value.path === pathname);
+
+    if (!value || pathname.includes("projects") || pathname.includes("blog")) {
       return true;
     }
 
