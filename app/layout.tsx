@@ -45,6 +45,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name = "google-site-verification" content = "f3BBwdzg0rbqr2r0mmaxwzenpaE5CD26iJgNj7H2Mlc" />
+      </head>
       <body
         className={`${roboto.className} ${tex.variable} ${texReg.variable} ${josefin.variable} overflow-y-hidden`}
       >
