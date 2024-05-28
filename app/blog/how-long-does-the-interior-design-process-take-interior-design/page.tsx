@@ -125,7 +125,7 @@ export default function page() {
         ]}
       />
 
-<P
+      <P
         text={`<a href = "/contact-us">Contact us for the best interior designing in Kolkata.</a>`}
         className="text-2xl text-blue-700 josefin-sans-400-itilic underline"
       />
