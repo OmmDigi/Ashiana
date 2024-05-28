@@ -7,7 +7,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title : "Why Custom Furniture Is Better Than Readymade Furniture?",
-  description : " Discover why custom-made furniture is better than ready-made furniture. Read this blog from Ashiana Interiors Kolkata to learn more.",
+  description : "Discover why custom-made furniture is better than ready-made furniture. Read this blog from Ashiana Interiors Kolkata to learn more.",
   authors: [{ name: "Ashiana Interiors" }],
   alternates: {
     canonical:
