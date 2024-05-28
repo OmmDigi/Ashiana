@@ -6,8 +6,13 @@ import "./globals.css";
 const roboto = Roboto({ subsets: ["latin"], weight: "400" });
 import local from "next/font/local";
 import MyProvider from "./MyProvider";
+import Head from "next/head";
 
-const josefin = Josefin_Sans({subsets : ["latin"], weight : "400", variable : "--josefin-400"});
+const josefin = Josefin_Sans({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--josefin-400",
+});
 
 const tex = local({
   src: [
@@ -45,9 +50,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <meta name = "google-site-verification" content = "f3BBwdzg0rbqr2r0mmaxwzenpaE5CD26iJgNj7H2Mlc" />
-      </head>
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="f3BBwdzg0rbqr2r0mMaxwzenpaE5CD26iJgNj7H2Mlc"
+        />
+      </Head>
       <body
         className={`${roboto.className} ${tex.variable} ${texReg.variable} ${josefin.variable} overflow-y-hidden`}
       >
