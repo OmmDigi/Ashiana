@@ -90,7 +90,6 @@ function ContactPopup() {
             className="outline-none border w-full border-gray-800 px-3 py-2 focus:border-blue-400"
           />
           <input
-            
             ref={numberRef}
             type="number"
             inputMode="numeric"
