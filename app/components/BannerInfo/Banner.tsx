@@ -56,7 +56,7 @@ export default function Banner() {
         {/* <div className="w-full backdrop-blur-md absolute z-10 top-0">
           <Navbar className="z-10" />
         </div> */}
-        <div className="size-full bg-[#0000009d] absolute top-0 bottom-0 z-0">
+        <div className="size-full bg-[#000000a4] absolute top-0 bottom-0 z-0">
           <section className="size-full flex items-center justify-center relative sm:pt-10">
             <BannerText
               className = {"font-tex text-[#d3d3d3] absolute leading-[1em] w-[850px] text-center text-8xl ease-in sm:text-4xl sm:w-full"}
