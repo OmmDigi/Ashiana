@@ -2,9 +2,9 @@ import Image from "next/image";
 import React from "react";
 import CollepseMenuLayout from "./CollepseMenuLayout";
 import IntersectionObserverComponent from "../components/IntersectionObserverComponent";
-import { IoIosArrowRoundBack, IoMdArrowDown } from "react-icons/io";
+import { IoMdArrowDown } from "react-icons/io";
 import Link from "next/link";
-import { decodeUrl, encodeUrl } from "@/utils/decodeUrl";
+import { encodeUrl } from "@/utils/decodeUrl";
 
 interface IProps {
   catName?: string;

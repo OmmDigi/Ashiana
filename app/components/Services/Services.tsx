@@ -1,12 +1,9 @@
 "use client";
 
-import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 import React, { useRef } from "react";
 import { IoMdArrowDown } from "react-icons/io";
 import { MdOutlineAdd } from "react-icons/md";
-import gsap from "gsap";
-import IntersectionObserverComponent from "../IntersectionObserverComponent";
 
 export default function Services() {
   const servicesList = [
@@ -20,8 +17,6 @@ export default function Services() {
     { text: "Luxury Interior Design", link: "" },
     { text: "Commercial Interior Design", link: "" },
   ];
-
-  const HEADING = "Elevate Your Interiors";
 
   return (
     <section className="w-full min-h-full px-28 sm:px-5 flex flex-col items-center mt-20 sm:mt-10">

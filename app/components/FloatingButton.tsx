@@ -26,7 +26,7 @@ function FloatingButton() {
   }
 
   return (
-    <div className="absolute bottom-14 right-14 z-10 flex flex-col items-center sm:right-5 sm:bottom-6 flexCenter">
+    <div className="absolute bottom-14 right-14 z-50 flex flex-col items-center sm:right-5 sm:bottom-6 flexCenter">
       <button
         onClick={openWhatsapp}
         title="Show Contact Us Dialog Btn"

@@ -1,12 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import Navbar from "../Navbar/Navbar";
-import BannerDetails from "./BannerDetails";
-import BannerImage from "./BannerImage";
 import { IoChevronBackSharp } from "react-icons/io5";
 import BannerText from "./BannerText";
+import NewBannerImage from "./NewBannerImage";
 
 export default function Banner() {
   const [currentBannerIndex, setCurretBannerIndex] = useState(0);
@@ -43,23 +40,24 @@ export default function Banner() {
   useEffect(() => {
     const TIME_INTERVAL_ID = setInterval(() => {
       goNext();
-    }, 5000);
-  }, []);
+    }, 10 * 1000);
+
+    return () => clearInterval(TIME_INTERVAL_ID);
+  }, [currentBannerIndex]);
 
   return (
     <div className="w-full">
       <div className="w-full h-[41rem] relative overflow-hidden sm:h-[21rem]">
-        <BannerImage
-          currentBannerIndex={currentBannerIndex}
+        <NewBannerImage
           banner_images={banner_images}
+          currentBannerIndex={currentBannerIndex}
         />
-        {/* <div className="w-full backdrop-blur-md absolute z-10 top-0">
-          <Navbar className="z-10" />
-        </div> */}
-        <div className="size-full bg-[#000000a4] absolute top-0 bottom-0 z-0">
+        <div className="size-full bg-[#00000077] absolute top-0 bottom-0 z-10">
           <section className="size-full flex items-center justify-center relative sm:pt-10">
             <BannerText
-              className = {"font-tex text-[#d3d3d3] absolute leading-[1em] w-[850px] text-center text-8xl ease-in sm:text-4xl sm:w-full"}
+              className={
+                "font-tex text-white absolute leading-[1em] w-[850px] text-center text-7xl ease-in sm:text-4xl sm:w-full"
+              }
               currentIndex={currentBannerIndex}
               banner_texts={banner_texts}
             />
@@ -87,6 +85,12 @@ export default function Banner() {
               </button>
             </div>
           </section>
+        </div>
+
+        <div className="absolute bottom-0 z-10 w-full py-10 flexCenter">
+          {banner_images.map((item, index) => (
+            <button key={index} onClick={() => setCurretBannerIndex(index)} className={`size-3 rounded-full mr-4 cursor-pointer border ${index === currentBannerIndex ? "bg-white border-white" : "bg-transparent"} transition-all duration-1000`}></button>
+          ))}
         </div>
       </div>
     </div>

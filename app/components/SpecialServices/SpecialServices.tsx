@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import { GrFormNextLink } from "react-icons/gr";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

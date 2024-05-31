@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import Navbarholder from "./components/Navbar/Navbarholder";
-import Footer from "./components/Footer/Footer";
 import { Provider } from "react-redux";
 import { store } from "@/redux/store";
 import ContactPopup from "./components/Popup/ContactPopup";

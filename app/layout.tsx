@@ -6,7 +6,6 @@ import "./globals.css";
 const roboto = Roboto({ subsets: ["latin"], weight: "400" });
 import local from "next/font/local";
 import MyProvider from "./MyProvider";
-import Head from "next/head";
 
 const josefin = Josefin_Sans({
   subsets: ["latin"],

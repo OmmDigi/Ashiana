@@ -1,10 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { IoMdArrowDown } from "react-icons/io";
-import { GrNext } from "react-icons/gr";
-import BannerImage from "../BannerInfo/BannerImage";
-import BannerText from "../BannerInfo/BannerText";
 import ClientsList from "./ClientsList";
 
 function ProjectTimeline() {
@@ -29,42 +25,6 @@ function ProjectTimeline() {
         </div>
       </div>
       <ClientsList />
-      {/* <div className="w-full overflow-hidden mt-5 bg-black"> */}
-      {/* <Image
-          className="size-full object-cover"
-          src="/timeline/image1.jpg"
-          alt=""
-          height={1200}
-          width={1200}
-        />
-        <div className="size-full absolute top-0 bottom-0 bg-[#00000069] flex items-center justify-center">
-          <h2 className="font-tex text-6xl text-white tracking-wider sm:text-4xl">Bohemian Haven</h2>
-
-          <div className="absolute bottom-0 right-0 w-full flex justify-end">
-            <div className="w-[50%] shadow-md">
-
-            </div>
-            <div className="flex flex-col">
-              <button className="bg-[#203556] p-5 cursor-pointer">
-                <GrNext color="#fff" />
-              </button>
-              <button className="bg-[#203556] p-5 cursor-pointer">
-                <GrNext color="#fff" className="rotate-180" />
-              </button>
-            </div>
-          </div>
-        </div> */}
-      {/* <BannerImage banner_images={["banner1.jpg"]} currentBannerIndex={0} />
-        <div className="size-full bg-[#0000009d] absolute top-0 bottom-0 z-0 pt-28">
-          <section className="size-full flex items-center justify-center">
-            <BannerText
-              className=""
-              banner_texts={["Hello How Are You All"]}
-              currentIndex={0}
-            />
-          </section>
-        </div> */}
-      {/* </div> */}
     </section>
   );
 }

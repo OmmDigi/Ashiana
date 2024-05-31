@@ -47,7 +47,7 @@ const Navbarholder = ({ pReferral }: IProps) => {
 
   return (
     <header
-      className={`w-full  absolute z-10 top-0 backdrop-blur-md ${
+      className={`w-full  absolute z-50 top-0 backdrop-blur-md ${
         needToChnageHeaderBg ? " bg-[#ffffffd3]" : isRestrictedPath() ? "bg-[#ffffffd3] text-gray-800" : "text-gray-800"
       } transition-all duration-500`}
     >

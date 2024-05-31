@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { IoMdArrowDown } from "react-icons/io";
-import TabItem from "../TabItem";
 import AboutTabs from "./AboutTabs";
 
 function About() {
