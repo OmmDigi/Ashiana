@@ -2,6 +2,13 @@ import React from "react";
 import Link from "next/link";
 import bloginfo from "@/public/bloginfo.json";
 import ShimmerImage from "../components/ShimmerImage";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/blogs",
+  },
+};
 
 function page() {
   let currentIndex = 0;

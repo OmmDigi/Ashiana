@@ -3,6 +3,13 @@ import React from "react";
 import { FaSquarePhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import ContactForm from "./ContactForm";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/contact-us",
+  },
+};
 
 function page() {
   return (

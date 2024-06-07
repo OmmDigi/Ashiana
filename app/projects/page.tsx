@@ -4,6 +4,8 @@ import { decodeUrl, encodeUrl } from "@/utils/decodeUrl";
 import OpenShowImageDialgoBtn from "../components/Popup/OpenShowImageDialgoBtn";
 import ShimmerImage from "../components/ShimmerImage";
 import { Metadata } from "next";
+import Readmoretext from "../components/Readmoretext";
+import { IoMdArrowDown } from "react-icons/io";
 
 export const metadata: Metadata = {
   title: "Projects Gallery | Ashiana Interiors",
@@ -62,7 +64,8 @@ function ProjectsPage({ searchParams }: { searchParams: { catname: string } }) {
         <h1 className="font-tex text-[#073842] leading-[1em] text-8xl mt-3 text-center sm:text-6xl">
           Projects
         </h1>
-        <p className="text-sm text-gray-700 josefin-sans-400 text-center pt-6 leading-7">
+
+        <Readmoretext className="text-sm text-gray-700 josefin-sans-400 text-center pt-6 leading-7 hidden sm:block">
           Discover the creativity and expertise of Ashiana Interiors Kolkata
           through our Projects Gallery. Each project showcases our commitment to
           excellence, featuring innovative designs and meticulous attention to
@@ -71,29 +74,50 @@ function ProjectsPage({ searchParams }: { searchParams: { catname: string } }) {
           needs. Explore the craftsmanship and quality that set us apart in the
           interior design industry. Whether you seek inspiration or wish to see
           our capabilities firsthand, our Projects Gallery is the perfect place
-          to start your journey toward transforming your space. <Link className="text-blue-600" href={"/contact-us"}>Contact us</Link> {" "}
+          to start your journey toward transforming your space.{" "}
+          <Link className="text-blue-600" href={"/contact-us"}>
+            Contact us
+          </Link>{" "}
+          today!!
+        </Readmoretext>
+        <p className="text-sm text-gray-700 josefin-sans-400 text-center pt-6 leading-7 sm:hidden">
+          Discover the creativity and expertise of Ashiana Interiors Kolkata
+          through our Projects Gallery. Each project showcases our commitment to
+          excellence, featuring innovative designs and meticulous attention to
+          detail. From modern living spaces to elegant commercial interiors, our
+          gallery highlights various styles tailored to meet our clients' unique
+          needs. Explore the craftsmanship and quality that set us apart in the
+          interior design industry. Whether you seek inspiration or wish to see
+          our capabilities firsthand, our Projects Gallery is the perfect place
+          to start your journey toward transforming your space.{" "}
+          <Link className="text-blue-600" href={"/contact-us"}>
+            Contact us
+          </Link>{" "}
           today!!
         </p>
 
-        <ul className="w-full my-10 flex items-center justify-center gap-6 overflow-x-scroll sm:justify-start hiddenScrollbar">
-          {catnames.map((catname, index) => (
-            <Link
-              className="block flex-shrink-0"
-              key={catname}
-              href={encodeUrl(`/projects?catname=${catname.toLowerCase()}`)}
-            >
-              <li
-                className={`font-tex ${
-                  index === selectedCatIndex
-                    ? "bg-[#07384221]"
-                    : "border shdowCategory border-[#07384221]"
-                } text-xs px-3 py-3 tracking-wider`}
+        {/* <div className="flex items-center gap-4"> */}
+          {/* <IoMdArrowDown className="rotate-90" size={25}/> */}
+          <ul className="w-full my-10 flex items-center justify-center gap-6 overflow-x-scroll sm:justify-start hiddenScrollbar">
+            {catnames.map((catname, index) => (
+              <Link
+                className="block flex-shrink-0"
+                key={catname}
+                href={encodeUrl(`/projects?catname=${catname.toLowerCase()}`)}
               >
-                {catname}
-              </li>
-            </Link>
-          ))}
-        </ul>
+                <li
+                  className={`font-tex ${
+                    index === selectedCatIndex
+                      ? "bg-[#07384221]"
+                      : "border shdowCategory border-[#07384221]"
+                  } text-xs px-3 py-3 tracking-wider`}
+                >
+                  {catname}
+                </li>
+              </Link>
+            ))}
+          </ul>
+        {/* </div> */}
 
         <ul className="grid grid-cols-3 flex-grow gap-10 sm:grid-cols-1">
           {datas[`${originalCatName}`].map((src: any, index: any) => (
