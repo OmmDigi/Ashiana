@@ -1,9 +1,18 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { decodeUrl, encodeUrl } from "@/utils/decodeUrl";
 import OpenShowImageDialgoBtn from "../components/Popup/OpenShowImageDialgoBtn";
 import ShimmerImage from "../components/ShimmerImage";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects Gallery | Ashiana Interiors",
+  description:
+    "Explore the Ashiana Interiors Projects Gallery for inspiring interior designs and innovative solutions in Kolkata. Check our previous projects and contact us!",
+  alternates: {
+    canonical: "/projects",
+  },
+};
 
 function ProjectsPage({ searchParams }: { searchParams: { catname: string } }) {
   const originalCatName = searchParams.catname || "residential";
@@ -48,15 +57,28 @@ function ProjectsPage({ searchParams }: { searchParams: { catname: string } }) {
   return (
     <main className="w-full flex flex-col items-start pt-[90px]">
       {/* <Navbar className="text-gray-800" /> */}
-      
-      <div className="px-20 sm:px-5 w-full">
-        <h2 className="font-tex text-[#073842] leading-[1em] text-8xl mt-3 text-center sm:text-6xl">
-          Projects
-        </h2>
 
-        <ul className="w-full my-10 flex items-center gap-6 sm:flex-wrap">
+      <div className="px-20 sm:px-5 w-full">
+        <h1 className="font-tex text-[#073842] leading-[1em] text-8xl mt-3 text-center sm:text-6xl">
+          Projects
+        </h1>
+        <p className="text-sm text-gray-700 josefin-sans-400 text-center pt-6 leading-7">
+          Discover the creativity and expertise of Ashiana Interiors Kolkata
+          through our Projects Gallery. Each project showcases our commitment to
+          excellence, featuring innovative designs and meticulous attention to
+          detail. From modern living spaces to elegant commercial interiors, our
+          gallery highlights various styles tailored to meet our clients' unique
+          needs. Explore the craftsmanship and quality that set us apart in the
+          interior design industry. Whether you seek inspiration or wish to see
+          our capabilities firsthand, our Projects Gallery is the perfect place
+          to start your journey toward transforming your space. <Link className="text-blue-600" href={"/contact-us"}>Contact us</Link> {" "}
+          today!!
+        </p>
+
+        <ul className="w-full my-10 flex items-center justify-center gap-6 overflow-x-scroll sm:justify-start hiddenScrollbar">
           {catnames.map((catname, index) => (
             <Link
+              className="block flex-shrink-0"
               key={catname}
               href={encodeUrl(`/projects?catname=${catname.toLowerCase()}`)}
             >
@@ -79,8 +101,8 @@ function ProjectsPage({ searchParams }: { searchParams: { catname: string } }) {
               <OpenShowImageDialgoBtn
                 className="overflow-hidden w-full"
                 imgSrc={`/projects/${originalCatName}/${src}`}
-              > 
-                 {/* categoryBorderRedious */}
+              >
+                {/* categoryBorderRedious */}
 
                 <ShimmerImage
                   src={`/projects/${originalCatName}/${src}`}

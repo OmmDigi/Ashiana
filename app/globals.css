@@ -204,3 +204,7 @@ td {
     transform: rotate(12deg);
   }
 }
+
+.hiddenScrollbar::-webkit-scrollbar {
+  display: none;
+}
