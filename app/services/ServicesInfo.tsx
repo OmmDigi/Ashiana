@@ -40,12 +40,12 @@ function ServicesInfo({
               > */}
               <a id={catName?.replaceAll(" ", "_")}></a>
               {topHeading ? (
-                <div className="w-full flex items-center justify-between pb-5">
+                <div className="w-full flex items-center justify-between pb-5 sm:flex-col sm:items-start sm:pt-5">
                   <h3 className="text-[1.5rem] josefin-sans-400 text-[#073842] sm:text-[1.4rem]">
                     {topHeading}
                   </h3>
                   <Link
-                    className="josefin-sans-400 flex items-center gap-2 group/allserviceslbl relative sm:mt-4"
+                    className="josefin-sans-400 flex items-center gap-2 group/allserviceslbl relative sm:mt-0"
                     href={`/services/${encodeUrl(catName || "")}`}
                   >
                     <span>Explore more</span>
@@ -57,7 +57,7 @@ function ServicesInfo({
               <CollepseMenuLayout info={menuinfo} />
               <span
                 // href="/contact-us"
-                className="font-medium text-[20px] sm:m-4 flex items-center gap-2 absolute bottom-0 josefin-sans-400 sm:static"
+                className="font-medium text-[20px] sm:my-4 flex items-center gap-2 absolute bottom-0 josefin-sans-400 sm:static"
               >
                 <span>
                   For {catName} Solutions in Kolkata :{" "}
@@ -73,12 +73,12 @@ function ServicesInfo({
             <div className={`w-full px-14 sm:px-0 relative`}>
               <a id={catName?.replaceAll(" ", "_")}></a>
               {topHeading ? (
-                <div className="w-full flex items-center justify-between pb-5">
+                <div className="w-full flex items-center justify-between pb-5 sm:flex-col sm:items-start sm:pt-5">
                   <h3 className="text-[1.5rem] josefin-sans-400 text-[#073842] sm:text-[1.4rem]">
                     {topHeading}
                   </h3>
                   <Link
-                    className="josefin-sans-400 flex items-center gap-2 group/allserviceslbl relative sm:mt-4"
+                    className="josefin-sans-400 flex items-center gap-2 group/allserviceslbl relative sm:mt-0"
                     href={`/services/${encodeUrl(catName || "")}`}
                   >
                     <span>Explore more</span>
@@ -91,7 +91,7 @@ function ServicesInfo({
               <CollepseMenuLayout info={menuinfo} />
               <span
                 // href="/contact-us"
-                className="font-medium text-[20px] sm:m-4 flex items-center gap-2 absolute bottom-0 josefin-sans-400 sm:static"
+                className="font-medium text-[20px] sm:my-4 flex items-center gap-2 absolute bottom-0 josefin-sans-400 sm:static"
               >
                 <span>
                   For {catName} Solutions in Kolkata :{" "}

@@ -15,7 +15,7 @@ interface IProps {
 export const metadata: Metadata = {
   title: "Best Modular Office Designer in Kolkata | Ashiana Interiors",
   description:
-    "Ashiana Interiors Kolkata - Best Modular Office Designer in Kolkata. Expert in creating stylish, functional office spaces tailored to your needs.",
+    "Ashiana Interiors - Best Modular Office Designer in Kolkata. Expert in creating stylish, functional office spaces tailored to your needs.",
   alternates: {
     canonical: "/services/modular-office",
   },
