@@ -1,16 +1,7 @@
-import Image from "next/image";
 import React from "react";
-import Navigator from "../Navigator";
-import SubHeading from "@/app/blog/SubHeading";
 import P from "@/app/blog/P";
-import FAQ from "@/app/components/FAQ";
-import Link from "next/link";
-import { MdOutlineMail } from "react-icons/md";
-import { FaSquarePhone } from "react-icons/fa6";
 import { decodeUrl } from "@/utils/decodeUrl";
 import { servicesList } from "@/constant";
-import OpenContactPopupBtn from "@/app/components/Popup/OpenContactPopupBtn";
-import { IoMdArrowDown } from "react-icons/io";
 import EachServiceLayout from "../EachServiceLayout";
 import GridImage from "../GridImage";
 import { Metadata } from "next";
