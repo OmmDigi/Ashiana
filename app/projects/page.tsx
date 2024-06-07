@@ -70,7 +70,7 @@ function ProjectsPage({ searchParams }: { searchParams: { catname: string } }) {
           through our Projects Gallery. Each project showcases our commitment to
           excellence, featuring innovative designs and meticulous attention to
           detail. From modern living spaces to elegant commercial interiors, our
-          gallery highlights various styles tailored to meet our clients' unique
+          gallery highlights various styles tailored to meet our clients&apos; unique
           needs. Explore the craftsmanship and quality that set us apart in the
           interior design industry. Whether you seek inspiration or wish to see
           our capabilities firsthand, our Projects Gallery is the perfect place
@@ -85,7 +85,7 @@ function ProjectsPage({ searchParams }: { searchParams: { catname: string } }) {
           through our Projects Gallery. Each project showcases our commitment to
           excellence, featuring innovative designs and meticulous attention to
           detail. From modern living spaces to elegant commercial interiors, our
-          gallery highlights various styles tailored to meet our clients' unique
+          gallery highlights various styles tailored to meet our clients&apos; unique
           needs. Explore the craftsmanship and quality that set us apart in the
           interior design industry. Whether you seek inspiration or wish to see
           our capabilities firsthand, our Projects Gallery is the perfect place

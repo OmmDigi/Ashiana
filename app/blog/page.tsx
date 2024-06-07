@@ -5,6 +5,8 @@ import ShimmerImage from "../components/ShimmerImage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title : "Blogs on Interior Design | Ashiana Interiors",
+  description : "Discover inspiring interior designs with Ashiana Interiors Kolkata. Read our blogs for tips, trends, and expert insights to transform your dream home.",
   alternates: {
     canonical: "/blogs",
   },
