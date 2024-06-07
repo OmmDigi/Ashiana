@@ -64,7 +64,7 @@ function ContactPopup() {
   return (
     <div
       onClick={closeDialog}
-      className={`w-full h-full bg-[#00000042] absolute top-0 bottom-0 z-30 ${
+      className={`w-full h-full bg-[#00000042] fixed top-0 bottom-0 z-[60] ${
         contactPopupVisibility ? "flexCenter" : "hidden"
       }`}
     >

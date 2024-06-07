@@ -9,7 +9,7 @@ import ShimmerImage from "../components/ShimmerImage";
 export const metadata: Metadata = {
   title: "About Us | Ashiana Interiors Kolkata",
   description:
-    "Learn everything about us page for insights into our design philosophy and expertise. Discover Ashiana Interiors Kolkata - Crafting spaces with passion.",
+    "Learn everything about us and get insights into our design philosophy and expertise. Discover Ashiana Interiors Kolkata - Crafting spaces with passion.",
   alternates: {
     canonical: "/about-us",
   },

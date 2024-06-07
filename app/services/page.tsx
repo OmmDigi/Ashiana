@@ -3,7 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import ServicesInfo from "./ServicesInfo";
 import { GiWeightLiftingDown } from "react-icons/gi";
+import { Metadata } from "next";
 
+
+export const metadata: Metadata = {
+  title: "Get the Best Interior Design Services in Kolkata",
+  description:
+    "Expert interior design services, modular kitchens, and offices in Kolkata. Transform your space with Ashiana Interiors. Trusted and innovative solutions.",
+  alternates: {
+    canonical: "/services",
+  },
+};
 
 function page() {
   const servicesList = [
@@ -210,9 +220,9 @@ function page() {
         <div className="w-full">
           <div className="flex gap-20 sm:flex-col sm:gap-0">
             <div className="max-w-[662px]">
-              <h2 className="font-tex text-[#073842] leading-[1em] text-left text-8xl sm:text-4xl sm:w-full">
+              <h1 className="font-tex text-[#073842] leading-[1em] text-left text-8xl sm:text-4xl sm:w-full">
                 Our Services
-              </h2>
+              </h1>
               <div className="w-full bg-[#0738421f] h-[1px] my-6 sm:my-3"></div>
             </div>
             <div className="max-w-[662px] flex items-start justify-end">
