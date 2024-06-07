@@ -22,7 +22,7 @@ function ShowImageDialog() {
       onClick={closeDialog}
       className={`w-full h-full bg-[#00000042] backdrop-blur-lg ${
         visibility ? "block" : "hidden"
-      } absolute top-0 bottom-0 z-30`}
+      } fixed top-0 bottom-0 z-[60]`}
     >
       <div className="size-full relative flexCenter">
         <Image
