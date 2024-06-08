@@ -157,5 +157,25 @@
     "category": "Kitchen Interior Design",
     "short_description": "How often have we not run out of storage space across pots and pans and cauldrons? Tripping over that ladle, frantic steps to find that fork! Space crunch in most apartments in metro cities has pushed us towards designing",
     "url_key": "what-is-kitchen-magic-corner-and-its-uses"
+  },
+  {
+    "id": "17",
+    "image": "/blog/blog17.webp",
+    "heading": "USAGE OF INVISIBLE GRILLE",
+    "date": "8th Jun 2024",
+
+    "category": "Home Interior Design",
+    "short_description": "Invisible grills are modern safety solutions for windows and balconies, offering unobstructed views while ensuring security.",
+    "url_key": "usage-of-invisible-grill"
+  },
+  {
+    "id": "18",
+    "image": "/blog/blog18.avif",
+    "heading": "THINGS TO REMEMBER BEFORE INSTALLING AC IN YOUR NEW HOUSE",
+    "date": "8th Jun 2024",
+
+    "category": "Home Interior Design",
+    "short_description": "When installing an air conditioning (AC) system in your new home, there are several key considerations to keep in mind",
+    "url_key": "things-to-remember-before-installing-ac-in-your-new-house"
   }
 ]

@@ -4,7 +4,7 @@ import ShimmerImage from "../components/ShimmerImage";
 function MainBannerImgae({ src }: { src: string }) {
   return (
     <ShimmerImage
-      className="mt-10 rounded-t-[1.3rem]"
+      className="mt-10 rounded-t-[1.3rem] aspect-video"
       src={src}
       alt=""
       height={1980}
