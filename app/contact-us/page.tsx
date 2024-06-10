@@ -6,6 +6,9 @@ import ContactForm from "./ContactForm";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "Contact Us | Ashiana Interiors Kolkata",
+  description:
+    "Contact Ashiana Interiors for premium interior design solutions in Kolkata. Connect with us today for customized services that transform your space.",
   alternates: {
     canonical: "/contact-us",
   },
