@@ -7,7 +7,7 @@ import ContactUs from "./components/ContactUs/ContactUs";
 import WhyChooseUs from "./components/WhyChooseUs/WhyChooseUs";
 import Testimonial from "./components/Testimonials/Testimonial";
 import SpecialServices from "./components/SpecialServices/SpecialServices";
-// import LatestNews from "./components/LatestNews/LatestNews";
+import LatestNews from "./components/LatestNews/LatestNews";
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
       <SpecialServices />
       <OurClients />
       <Testimonial />
-      {/* <LatestNews /> */}
+      <LatestNews />
       {/* <div className="mt-20 sm:mt-10">
         <OurTeam />
       </div> */}

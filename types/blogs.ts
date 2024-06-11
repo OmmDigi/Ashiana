@@ -1,11 +1,9 @@
-export interface IBlogsItem {
-    id : string;
-    tags : string[];
-    route : string;
-    title : string;
-    description : string;
-    bannerimg : string,
-    date : string,
-    catgory : string,
-    author : string
+export interface IBlog {
+  id: string;
+  image: string;
+  heading: string;
+  date: string;
+  category: string;
+  short_description: string;
+  url_key: string;
 }

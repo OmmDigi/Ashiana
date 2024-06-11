@@ -1,32 +1,99 @@
 "use client";
 
-import { IBlogsItem } from '@/types/blogs';
-import React, { useEffect, useState } from 'react'
+import { IBlog } from "@/types/blogs";
+import React, { useEffect, useState } from "react";
+import { GrLinkNext } from "react-icons/gr";
+import BlogItem from "./BlogItem";
 
 interface IProps {
-    blogsData : IBlogsItem[]
+  blogsData: IBlog[];
 }
 
-export default function BlogCrasoule({blogsData} : IProps) {
-
-  const [blogs, setBlogs] = useState(null);
+export default function BlogCrasoule({ blogsData }: IProps) {
+  const [blogs, setBlogs] = useState<IBlog[][]>([]);
+  const [currentCrasoulIndex, setCurrentCrasoulIndex] = useState(0);
 
   useEffect(() => {
-    const newLists : IBlogsItem[][] = [];
-    const tempList : IBlogsItem[] = [];
-    blogsData.forEach((item, index) => {
-       if((index + 1) % 3 === 0) {
-        
-       }
-       
+    function forNotMobile() {
+      const newList: IBlog[][] = [];
+      let count = 0;
+      let currentIndex = 0;
+      blogsData.forEach((_, index) => {
+        currentIndex = blogsData.length - 1 - index;
+        if (!newList[count]) {
+          newList[count] = [blogsData[currentIndex]];
+        } else {
+          newList[count].push(blogsData[currentIndex]);
+        }
+        if ((index + 1) % 3 === 0) {
+          count++;
+        }
+      });
+      setBlogs(newList);
+    }
 
-    })
-  })
+    function forMobileDevices() {
+      const newList: IBlog[][] = [];
+      let currentIndex = 0;
+      blogsData.forEach((_, index) => {
+        currentIndex = blogsData.length - 1 - index;
+        newList.push([blogsData[currentIndex]]);
+      });
+      setBlogs(newList);
+    }
 
+    if (window.innerWidth < 639) {
+      forMobileDevices();
+    } else {
+      forNotMobile();
+    }
+  }, []);
+
+  const goNext = () => {
+    setCurrentCrasoulIndex((preIndex) => {
+      if (preIndex === blogs.length - 1) return 0;
+      return preIndex + 1;
+    });
+  };
+
+  const goPrev = () => {
+    setCurrentCrasoulIndex((preIndex) => {
+      if (preIndex === 0) return blogs.length - 1;
+      return preIndex - 1;
+    });
+  };
 
   return (
-    <div>
-        
+    <div className="flex overflow-hidden w-full relative">
+      {blogs.map((eachUL, index) => {
+        return (
+          <ul
+            style={{ translate: `-${currentCrasoulIndex * 100}%` }}
+            key={index}
+            className="w-full flex-shrink-0 grid grid-cols-3 gap-6 px-28 mt-10 sm:grid-cols-1 sm:px-5 transition-all duration-500"
+          >
+            {eachUL.map((item) => (
+              <BlogItem key={item.id} blogitem={item} />
+            ))}
+          </ul>
+        );
+      })}
+      <div className="absolute top-0 bottom-0 flexCenter left-14 sm:left-0">
+        <button
+          onClick={goPrev}
+          className="size-10 bg-[#374151] rounded-full flexCenter cursor-pointer active:scale-95"
+        >
+          <GrLinkNext size={13} color="#fff" className="rotate-180" />
+        </button>
+      </div>
+      <div className="absolute top-0 bottom-0 flexCenter right-14 sm:right-0">
+        <button
+          onClick={goNext}
+          className="size-10 bg-[#374151] rounded-full flexCenter cursor-pointer active:scale-95"
+        >
+          <GrLinkNext size={13} color="#fff" />
+        </button>
+      </div>
     </div>
-  )
+  );
 }
