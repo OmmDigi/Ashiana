@@ -2,6 +2,7 @@ import { IBlog } from "@/types/blogs";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import ShimmerImage from "../ShimmerImage";
 
 interface IProps {
   blogitem: IBlog;
@@ -15,7 +16,7 @@ export default function BlogItem({ blogitem }: IProps) {
         className="w-full flex-shrink-0 block"
       >
         <div className="w-full h-48 overflow-hidden">
-          <Image
+          <ShimmerImage
             src={blogitem.image}
             className="object-cover size-full"
             alt=""
