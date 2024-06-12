@@ -52,7 +52,8 @@ function About() {
         <AboutTabs />
         <div className="px-10 flexCenter min-h-[24rem] relative sm:px-0 sm:items-start">
           <Image
-            src="/about/about.jpg"
+            className="w-96"
+            src="/about/about-us-1.png"
             alt=""
             width={1280}
             height={720}
