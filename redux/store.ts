@@ -2,11 +2,13 @@ import { configureStore } from "@reduxjs/toolkit";
 
 import popupFormSlice from "./slices/popupFormSlice";
 import showImageDialog from "./slices/showImageDialog";
+import mobileSliderSlice from "./slices/mobileSliderSlice";
 
 export const store = configureStore({
   reducer: {
     popupForm: popupFormSlice,
-    showImageDialog : showImageDialog
+    showImageDialog : showImageDialog,
+    mobileSlider : mobileSliderSlice
   },
 });
 

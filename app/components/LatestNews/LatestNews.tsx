@@ -6,7 +6,7 @@ import BlogCrasoule from "./BlogCrasoule";
 
 function LatestNews() {
   return (
-    <section className="w-full min-h-[41rem] sm:min-h-full sm:mt-14 py-20">
+    <section className="w-full min-h-[41rem] sm:min-h-full sm:mt-14 py-20 pt-0">
       <div className="w-full px-28 sm:px-5">
         <h2 className="font-tex text-[#073842] leading-[1em] w-[850px] text-left text-[4.3rem] sm:w-full sm:text-4xl">
           Latest Blogs

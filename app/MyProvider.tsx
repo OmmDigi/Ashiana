@@ -8,6 +8,7 @@ import ContactPopup from "./components/Popup/ContactPopup";
 import FloatingButton from "./components/FloatingButton";
 import NewFooter from "./components/Footer/NewFooter";
 import ShowImageDialog from "./components/Popup/ShowImageDialog";
+import MobileSlider from "./components/MobileSlider";
 
 function MyProvider({ children }: { children: React.ReactNode }) {
   const scrollbarRef = useRef<HTMLDivElement>(null);
@@ -22,6 +23,7 @@ function MyProvider({ children }: { children: React.ReactNode }) {
           <ContactPopup />
           <FloatingButton />
           <ShowImageDialog />
+          <MobileSlider />
           <Navbarholder pReferral={scrollbarRef} />
           {children}
           <NewFooter />

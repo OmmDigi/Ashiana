@@ -7,9 +7,10 @@ interface IPorps {
   isRestrictedPath : () => boolean;
   needToChnageHeaderBg ? : boolean;
   className?: string;
+  pReferral: React.RefObject<HTMLDivElement>;
 }
 
-export default function Navbar({ isRestrictedPath, needToChnageHeaderBg, className }: IPorps) {
+export default function Navbar({ isRestrictedPath, needToChnageHeaderBg, className, pReferral }: IPorps) {
   return (
     <div
       className={`w-full text-[#ffffffe1] drop-shadow-2xl flex items-center justify-center h-[90px]  ${className}`}
@@ -19,7 +20,7 @@ export default function Navbar({ isRestrictedPath, needToChnageHeaderBg, classNa
           <Image className="w-40" src={needToChnageHeaderBg ? "/black_logo.webp" : isRestrictedPath() ? "/black_logo.webp" : "/logo.webp"} alt="" height={1200} width={1200}/>
         </Link>
 
-        <NavMenu />
+        <NavMenu pReferral={pReferral}/>
       </div>
     </div>
   );
