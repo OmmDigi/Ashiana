@@ -1,7 +1,7 @@
 "use client";
 
 import { IBlog } from "@/types/blogs";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { GrLinkNext } from "react-icons/gr";
 import BlogItem from "./BlogItem";
 
@@ -12,6 +12,9 @@ interface IProps {
 export default function BlogCrasoule({ blogsData }: IProps) {
   const [blogs, setBlogs] = useState<IBlog[][]>([]);
   const [currentCrasoulIndex, setCurrentCrasoulIndex] = useState(0);
+
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
 
   useEffect(() => {
     function forNotMobile() {
@@ -63,11 +66,41 @@ export default function BlogCrasoule({ blogsData }: IProps) {
     });
   };
 
+  const handleTouchStart = (e: React.TouchEvent<HTMLUListElement>) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLUListElement>) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current === null || touchEndX.current === null) return;
+
+    const distance = touchStartX.current - touchEndX.current;
+    const minSwipeDistance = 50; // Define a minimum distance for a valid swipe
+
+    if (distance > minSwipeDistance) {
+      //swipe left
+      goNext();
+    } else if (distance < -minSwipeDistance) {
+      //swipe right
+      goPrev();
+    }
+
+    // Reset touch coordinates
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
   return (
     <div className="flex overflow-hidden w-full relative">
       {blogs.map((eachUL, index) => {
         return (
           <ul
+            onTouchMove={handleTouchMove}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
             style={{ translate: `-${currentCrasoulIndex * 100}%` }}
             key={index}
             className="w-full flex-shrink-0 grid grid-cols-3 gap-6 px-28 mt-10 sm:grid-cols-1 sm:px-5 transition-all duration-500"

@@ -51,10 +51,10 @@ function WhyChooseUs() {
               {index + 1}
             </div>
             <div className="w-full">
-              <h3 className="font-semibold text-[1.4rem] mt-[1rem] text-[#203556] josefin-sans-400">
+              <h3 className="font-semibold text-[1.4rem] mt-[1rem] text-[#203556] josefin-sans-400 text-center">
                 {item.title}
               </h3>
-              <p className="text-[1rem] mt-[0.2rem] text-[#597274]">
+              <p className="text-[1rem] mt-[0.2rem] text-[#597274] text-center">
                 {item.subtitle}
               </p>
             </div>

@@ -8,10 +8,6 @@ import { Metadata } from "next";
 import Script from "next/script";
 import { FAQPage, WithContext } from "schema-dts";
 
-interface IProps {
-  params: { eachservice: string };
-}
-
 export const metadata: Metadata = {
   title: "Best Chair & Sofa Designer In Kolkata | Ashiana Interiors",
   description:
@@ -21,19 +17,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function page({ params }: IProps) {
-  const servicename = params.eachservice;
+export default function page() {
   const navigatorInfo = [
     { link: "/", text: "home" },
     { link: "/services", text: "services" },
+    { link: "/services/chair-and-sofa", text: "chair-and-sofa" },
   ];
-
-  if (servicename) {
-    navigatorInfo.push({
-      link: `/services/${servicename}`,
-      text: decodeUrl(servicename),
-    });
-  }
 
   const faqs = [
     {
@@ -126,6 +115,7 @@ export default function page({ params }: IProps) {
         }}
       />
       <EachServiceLayout
+        navigatorInfo={navigatorInfo}
         blogheading="Best Chair & Sofa Designer In Kolkata"
         blogimage="/services/chair-and-sofa-blog-banner.webp"
         faqs={faqs}

@@ -26,6 +26,7 @@ export default function page({ params }: IProps) {
   const navigatorInfo = [
     { link: "/", text: "home" },
     { link: "/services", text: "services" },
+    { link: "/services/modular-office", text: "modular-office" },
   ];
 
   if (servicename) {
@@ -126,6 +127,7 @@ export default function page({ params }: IProps) {
         }}
       />
       <EachServiceLayout
+        navigatorInfo={navigatorInfo}
         blogheading="Best Modular Office Designer in Kolkata"
         blogimage="/services/moduler-office-blog-banner.webp"
         faqs={faqs}

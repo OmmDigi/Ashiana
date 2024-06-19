@@ -1,12 +1,16 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { IoChevronBackSharp } from "react-icons/io5";
 import BannerText from "./BannerText";
 import NewBannerImage from "./NewBannerImage";
 
 export default function Banner() {
   const [currentBannerIndex, setCurretBannerIndex] = useState(0);
+
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+
   const banner_images = [
     "banner1.webp",
     "banner2.webp",
@@ -15,7 +19,7 @@ export default function Banner() {
   ];
 
   const banner_texts = [
-    "Designing interiors <br /> <p class='paddingTop30'>inspiring lifestyles.</p>",
+    `Designing interiors <p class = "pt-2">inspiring lifestyles.</p>`,
     "Your vision, our expertise.",
     "Discover the Art of Living",
     "Creating Harmony Through Design",
@@ -45,9 +49,41 @@ export default function Banner() {
     return () => clearInterval(TIME_INTERVAL_ID);
   }, [currentBannerIndex]);
 
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current === null || touchEndX.current === null) return;
+
+    const distance = touchStartX.current - touchEndX.current;
+    const minSwipeDistance = 50; // Define a minimum distance for a valid swipe
+
+    if (distance > minSwipeDistance) {
+      //swipe left
+      goNext();
+    } else if (distance < -minSwipeDistance) {
+      //swipe right
+      goPrev();
+    }
+
+    // Reset touch coordinates
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
   return (
     <div className="w-full">
-      <div className="w-full h-[41rem] relative overflow-hidden sm:h-[21rem]">
+      <div
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        className="w-full h-[41rem] relative overflow-hidden sm:h-[21rem]"
+      >
         <NewBannerImage
           banner_images={banner_images}
           currentBannerIndex={currentBannerIndex}
@@ -89,7 +125,15 @@ export default function Banner() {
 
         <div className="absolute bottom-0 z-10 w-full py-10 flexCenter">
           {banner_images.map((item, index) => (
-            <button key={index} onClick={() => setCurretBannerIndex(index)} className={`size-3 rounded-full mr-4 cursor-pointer border ${index === currentBannerIndex ? "bg-white border-white" : "bg-transparent"} transition-all duration-1000`}></button>
+            <button
+              key={index}
+              onClick={() => setCurretBannerIndex(index)}
+              className={`size-3 rounded-full mr-4 cursor-pointer border ${
+                index === currentBannerIndex
+                  ? "bg-white border-white"
+                  : "bg-transparent"
+              } transition-all duration-1000`}
+            ></button>
           ))}
         </div>
       </div>

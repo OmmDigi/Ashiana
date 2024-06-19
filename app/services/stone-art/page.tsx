@@ -1,16 +1,11 @@
 import React from "react";
 import P from "@/app/blog/P";
-import { decodeUrl } from "@/utils/decodeUrl";
 import { servicesList } from "@/constant";
 import EachServiceLayout from "../EachServiceLayout";
 import GridImage from "../GridImage";
 import { Metadata } from "next";
 import { FAQPage, WithContext } from "schema-dts";
 import Script from "next/script";
-
-interface IProps {
-  params: { eachservice: string };
-}
 
 export const metadata: Metadata = {
   title: "Best Stone Art Designer in Kolkata | Ashiana Interiors",
@@ -21,19 +16,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function page({ params }: IProps) {
-  const servicename = params.eachservice;
+export default function page() {
   const navigatorInfo = [
     { link: "/", text: "home" },
     { link: "/services", text: "services" },
+    { link: "/services/stone-art", text: "stone-art" },
   ];
-
-  if (servicename) {
-    navigatorInfo.push({
-      link: `/services/${servicename}`,
-      text: decodeUrl(servicename),
-    });
-  }
 
   const faqs = [
     {
@@ -124,6 +112,7 @@ export default function page({ params }: IProps) {
         }}
       />
       <EachServiceLayout
+        navigatorInfo={navigatorInfo}
         blogheading="Best Stone Art Designer in Kolkata"
         blogimage="/services/stone-art-blog-banner.webp"
         faqs={faqs}

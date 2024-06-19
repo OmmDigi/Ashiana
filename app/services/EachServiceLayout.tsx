@@ -10,27 +10,27 @@ import FAQ from "../components/FAQ";
 import SubHeading from "../blog/SubHeading";
 import { encodeUrl } from "@/utils/decodeUrl";
 import ShimmerImage from "../components/ShimmerImage";
+import Navigator from "./Navigator";
 
 interface IProps {
-  topheading : string;
-  blogheading : string;
-  topimage : string;
-  blogimage : string;
+  navigatorInfo: { text: string; link: string }[];
+  topheading: string;
+  blogheading: string;
+  topimage: string;
+  blogimage: string;
   servicename: string;
   servicesList: {
     link: string;
     text: string;
   }[];
   children: React.ReactNode;
-  faqs : {
+  faqs: {
     question: string;
     answer: string;
-}[]
+  }[];
 }
 
 export default function EachServiceLayout(props: IProps) {
-  // console.log(props.servicesList[0].link)
-  // console.log(`/services/${encodeUrl(props.servicename)}`)
   return (
     <section className="">
       <div className="w-full relative overflow-hidden h-[25rem] sm:h-[18rem]">
@@ -43,13 +43,13 @@ export default function EachServiceLayout(props: IProps) {
         />
         <div className="size-full bg-[#0000008e] absolute top-0 bottom-0 flex items-center px-32 sm:px-5">
           <div>
-            <h2 className="text-white font-tex text-3xl tracking-wider mt-6 sm:mt-14">
+            <h2 className="text-white font-tex text-3xl tracking-wider mt-6 sm:mt-20">
               {props.topheading}
             </h2>
-            {/* <Navigator
+            <Navigator
               className="text-white text-[0.8rem] mt-3"
-              info={navigatorInfo}
-            /> */}
+              info={props.navigatorInfo}
+            />
           </div>
         </div>
       </div>
@@ -70,9 +70,7 @@ export default function EachServiceLayout(props: IProps) {
           />
           {props.children}
           <div className="mt-10">
-            <FAQ
-              faqs={props.faqs}
-            />
+            <FAQ faqs={props.faqs} />
           </div>
         </section>
         <section className="w-[30%] px-10 sm:px-0 sm:w-full sm:mt-10">

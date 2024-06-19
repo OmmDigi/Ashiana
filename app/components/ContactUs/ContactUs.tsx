@@ -5,7 +5,7 @@ import OpenContactPopupBtn from "../Popup/OpenContactPopupBtn";
 
 function ContactUs() {
   return (
-    <section className="w-full mt-0 sm:mt-10">
+    <section className="w-full mt-0 sm:mt-0">
       <div className="w-full px-28 sm:px-5">
         <h2 className="font-tex text-[#073842] leading-[1em] w-[850px] text-left text-[4.3rem] uppercase sm:w-full sm:text-4xl">
           Get in Touch
@@ -15,7 +15,7 @@ function ContactUs() {
             Building Relationships, One Conversation at a Time
           </p>
           <Link
-            className="josefin-sans-400 flex items-center gap-2 group/allserviceslbl relative"
+            className="josefin-sans-400 flex pt-3 items-center gap-2 group/allserviceslbl relative"
             href="/contact-us"
           >
             <span>Contact Us</span>

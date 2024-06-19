@@ -8,10 +8,6 @@ import { Metadata } from "next";
 import { FAQPage, WithContext } from "schema-dts";
 import Script from "next/script";
 
-interface IProps {
-  params: { eachservice: string };
-}
-
 export const metadata: Metadata = {
   title: "Best Modular Kitchen Designer in Kolkata | Ashiana Interiors",
   description:
@@ -21,19 +17,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function page({ params }: IProps) {
-  const servicename = params.eachservice;
+export default function page() {
   const navigatorInfo = [
     { link: "/", text: "home" },
     { link: "/services", text: "services" },
+    { link: "/services/modular-kitchen", text: "modular-kitchen" },
   ];
-
-  if (servicename) {
-    navigatorInfo.push({
-      link: `/services/${servicename}`,
-      text: decodeUrl(servicename),
-    });
-  }
 
   const faqs = [
     {
@@ -134,6 +123,7 @@ export default function page({ params }: IProps) {
         }}
       />
       <EachServiceLayout
+        navigatorInfo={navigatorInfo}
         blogheading="Best Modular Kitchen Designer in Kolkata"
         blogimage="/services/moduler-kitchen-blog-banner.webp"
         faqs={faqs}
