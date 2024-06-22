@@ -7,7 +7,6 @@ import { usePathname, useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { setMobileSliderSlice } from "@/redux/slices/mobileSliderSlice";
 import { RootState } from "@/redux/store";
-import { TbSquareDot } from "react-icons/tb";
 
 export default function MobileSlider() {
   const [isSubMenuVisiable, setIsSubMenuVisiable] = useState(false);
@@ -52,8 +51,8 @@ export default function MobileSlider() {
         sliderVisibility ? "translate-x-0" : "translate-x-full"
       } transition-all duration-500`}
     >
-      <div className="w-[75%] h-full bg-[#ffffff] shadow-2xl">
-        <ul className="size-full pt-4">
+      <div className="w-[75%] h-full bg-[#ffffff] shadow-2xl overflow-hidden">
+        <ul className="size-full pt-4 overflow-y-scroll h-[90%] pb-10">
           {nav_options.map((item) => (
             <li
               key={item.id}
@@ -90,7 +89,7 @@ export default function MobileSlider() {
                         : ""
                     }`}
                   >
-                    <TbSquareDot />
+                    {<subMenuItem.icon />}
                     {subMenuItem.name}
                   </li>
                 ))}

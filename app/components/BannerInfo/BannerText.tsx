@@ -16,11 +16,7 @@ function BannerText({ className, currentIndex, banner_texts }: IPorps) {
           key={item}
           className={
             className +
-            ` ${
-              index === currentIndex
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 -translate-x-7"
-            } transition-all duration-[1000ms]`
+            ` transition-all duration-[1000ms]`
           }
         >
           <div dangerouslySetInnerHTML={{ __html: item }}></div>

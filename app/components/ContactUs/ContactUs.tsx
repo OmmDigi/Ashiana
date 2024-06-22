@@ -6,8 +6,8 @@ import OpenContactPopupBtn from "../Popup/OpenContactPopupBtn";
 function ContactUs() {
   return (
     <section className="w-full mt-0 sm:mt-0">
-      <div className="w-full px-28 sm:px-5">
-        <h2 className="font-tex text-[#073842] leading-[1em] w-[850px] text-left text-[4.3rem] uppercase sm:w-full sm:text-4xl">
+      <div className="w-full px-28 sm:px-5 md:px-10">
+        <h2 className="font-tex text-[#073842] leading-[1em] w-[850px] text-left text-[4.3rem] uppercase sm:w-full sm:text-4xl md:w-full">
           Get in Touch
         </h2>
         <div className="w-full pt-9 border-t border-[#0738421f] mt-9 flex items-center sm:flex-col sm:items-start">
@@ -15,7 +15,7 @@ function ContactUs() {
             Building Relationships, One Conversation at a Time
           </p>
           <Link
-            className="josefin-sans-400 flex pt-3 items-center gap-2 group/allserviceslbl relative"
+            className="josefin-sans-400 flex pt-3 md:pt-0 items-center gap-2 group/allserviceslbl relative"
             href="/contact-us"
           >
             <span>Contact Us</span>
@@ -28,7 +28,7 @@ function ContactUs() {
       <div className="w-full relative h-96 mt-10">
         <div className="pimg2 w-full h-full"></div>
         <div className="size-full bg-[#0000009a] absolute top-0 bottom-0 flexCenter flex-col">
-          <h2 className="font-tex text-7xl text-white sm:text-4xl sm:text-center">
+          <h2 className="font-tex text-7xl text-white sm:text-4xl sm:text-center md:text-center">
             Have a project in mind?
           </h2>
           <h3 className="josefin-sans-400 text-white tracking-wider text-xl pt-8">

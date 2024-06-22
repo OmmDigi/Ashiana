@@ -7,8 +7,8 @@ import BlogCrasoule from "./BlogCrasoule";
 function LatestNews() {
   return (
     <section className="w-full h-auto sm:min-h-full sm:mt-14 pb-10 pt-0">
-      <div className="w-full px-28 sm:px-5">
-        <h2 className="font-tex text-[#073842] leading-[1em] w-[850px] text-left text-[4.3rem] sm:w-full sm:text-4xl">
+      <div className="w-full px-28 sm:px-5 md:px-10">
+        <h2 className="font-tex text-[#073842] leading-[1em] w-[850px] text-left text-[4.3rem] sm:w-full sm:text-4xl md:w-full">
           Latest Blogs
         </h2>
         <div className="w-full pt-9 border-t border-[#0738421f] mt-9 flex items-center sm:flex-col sm:items-start sm:mt-5 sm:pt-4">

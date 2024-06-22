@@ -5,7 +5,6 @@ import ServicesInfo from "./ServicesInfo";
 import { GiWeightLiftingDown } from "react-icons/gi";
 import { Metadata } from "next";
 
-
 export const metadata: Metadata = {
   title: "Get the Best Interior Design Services in Kolkata",
   description:
@@ -18,8 +17,39 @@ export const metadata: Metadata = {
 function page() {
   const servicesList = [
     {
+      text: "Interior Design",
+      link: "/services/interior-design",
+      dropdown: [
+        {
+          heading: "Collaborative Design",
+          subtitle:
+            "Partner with us to craft a home that flows perfectly with your needs and style. Explore layouts, storage solutions, and 3D visualizations to bring your vision to life.",
+        },
+        {
+          heading: "Material Magic",
+          subtitle:
+            "Get expert advice from <a class = 'linkStyle' href = '/services/interior-design'>Ashiana for the best interior design services in Kolkata</a> on materials, finishes, and lighting that suit your budget, lifestyle, and desired aesthetic. Achieve a cohesive and stylish look throughout your entire home.",
+        },
+        {
+          heading: "Project Peace of Mind",
+          subtitle:
+            "Let a designer manage your renovation or decoration project. They'll handle communication, ensure quality, and give you peace of mind knowing your dream home is in expert hands.",
+        },
+        {
+          heading: "Effortless Furnishing",
+          subtitle:
+            "Find furniture that complements your design and maximizes functionality. Source the perfect decorative elements to personalize your space and reflect your unique style.",
+        },
+        {
+          heading: "Finishing Touches",
+          subtitle:
+            "Create an inviting ambiance with a strategic lighting plan. Personalize your space with the help of Ashiana to achieve a cohesive and stunning home that reflects you.",
+        },
+      ],
+    },
+    {
       text: "Modular Kitchen",
-      link: "#Modular_Kitchen",
+      link: "/services/modular-kitchen",
       dropdown: [
         {
           heading: "Design and Customize:",
@@ -49,157 +79,188 @@ function page() {
       ],
     },
     {
-      text: "Modular Office",
-      link: "#Modular_Office",
+      text: "MODULAR FURNITURE",
+      link: "/services/modular-furniture",
       dropdown: [
         {
-          heading: "Assess Needs and Requirements:",
+          heading: "Design Your Way",
           subtitle:
-            "Start by understanding the purpose and requirements of your office space. Consider factors such as the number of employees, workflow, departments, privacy needs, and any special requirements like meeting rooms, storage areas, or collaborative spaces. This assessment will help you determine the size, layout, and features your modular office needs.",
+            "Modular furniture lets you customize layouts for any room. Need a spacious reading nook one day and a social gathering area the next? Rearrange your modular units with ease to create the perfect space for any occasion with <a class = 'linkStyle' href = '/services/interior-design'>Ashiana - the best interior design services in Kolkata</a>. And as your style evolves, simply update your furniture with new finishes or add-on pieces.",
         },
         {
-          heading: "Design the Layout:",
+          heading: "Maximize Every Inch",
           subtitle:
-            "Once you have a clear understanding of your requirements, design a layout that maximizes space utilization and supports productivity. Modular offices allow for flexibility, so consider using prefabricated walls, partitions, and furniture that can be easily rearranged or expanded as needed. Optimize natural light, ventilation, and accessibility in your design to create a comfortable and inviting workspace.",
+            "Small spaces, rejoice! Modular furniture is a master of space optimization. Combine storage solutions with functional furniture pieces, like ottomans with hidden compartments or beds with built-in drawers. This not only keeps your belongings organized but also helps you make the most of every square foot in your home or office.",
         },
         {
-          heading: "Select Modular Components:",
+          heading: "Seamless Style Integration",
           subtitle:
-            "Choose modular components such as cubicles, desks, partitions, storage units, and dividers that suit your design and functional requirements. Look for customizable and interchangeable elements that can be easily reconfigured to adapt to changing needs. Consider factors like durability, aesthetics, ergonomics, and compatibility with technology when selecting components for your modular office.",
+            "No more furniture mismatch woes! Modular furniture comes in a vast array of finishes and materials, from sleek modern to warm and inviting wood tones. Mix and match pieces to create a cohesive aesthetic that complements your existing décor. Need a pop of color or a touch of industrial chic? <a class = 'linkStyle' href = '/services/modular-furniture'>Ashiana’s Modular furniture solution</a> allows you to personalize your space and express your unique style.",
         },
         {
-          heading: "Install Infrastructure:",
+          heading: "Easy Assembly, Endless Possibilities",
           subtitle:
-            "Ensure that your modular office is equipped with the necessary infrastructure to support your operations. This includes electrical wiring, network connectivity, lighting, HVAC systems, and any specialized equipment or technology required for your business. Plan the placement of outlets, data ports, and other fixtures to accommodate current and future needs, keeping flexibility in mind.",
+            "Forget complicated instruction manuals and frustration. Modular furniture is designed for effortless assembly and disassembly. Enjoy the satisfaction of setting up your space quickly and easily. And the best part? As your needs or preferences change, simply reconfigure your modular units to create a whole new look and feel.",
         },
         {
-          heading: "Test and Adjust:",
+          heading: "Budget-Friendly Versatility",
           subtitle:
-            "Once the modular components are installed, test the layout and functionality of your office space to identify any issues or areas for improvement. Gather feedback from employees and stakeholders and make adjustments as needed to optimize the workspace for productivity, comfort, and efficiency. Regularly review and update your modular office layout to adapt to changing business needs and ensure continued success.",
+            "Modular pieces often have the advantage of being reconfigurable or expandable. This means you can start with a basic set and add on more units as your needs evolve, saving you money in the long run. Ashiana’s Modular furniture design service offers incredible versatility and long-term value, making it a smart choice for both your home and office.",
         },
       ],
     },
     {
-      text: "Chair And Sofa",
-      link: "#Chair_And_Sofa",
+      text: "FALSE CEILING",
+      link: "/services/false-ceiling",
       dropdown: [
         {
-          heading: "Measure and Plan:",
+          heading: "Design Versatility",
           subtitle:
-            "Before you start arranging furniture, measure the dimensions of your room to understand the available space. Consider the traffic flow, focal points (like a fireplace or TV), and any architectural features. Use this information to create a rough layout plan, either on paper or digitally.",
+            "Show your creativity! <a class = 'linkStyle' href = '/services/false-ceiling'>Ashiana’s false ceiling designs</a> come in various materials and finishes, allowing you to complement your existing décor or create a bold new look. Think sleek metal panels for a modern touch or classic plaster for timeless elegance.",
         },
         {
-          heading: "Choose the focal point:",
+          heading: "Maximize Functionality",
           subtitle:
-            "Identify the focal point of the room. This could be a fireplace, a large window with a view, or a TV. Arrange your sofa and chairs to face this focal point. If the room has multiple focal points, prioritize the most frequently used one.",
+            "More than just aesthetics, false ceilings offer hidden advantages. Conceal electrical wiring, HVAC ducts, and plumbing for a clean, clutter-free look. Integrate recessed lighting to enhance ambiance and functionality.",
         },
         {
-          heading: "Arrange the sofa:",
+          heading: "Sound Control Superhero",
           subtitle:
-            "Start by placing the sofa against one of the room's walls, preferably facing the focal point. Make sure there's enough space around the sofa for comfortable movement. Leave at least 3 feet of space between the sofa and coffee table, if using one, for easy access.",
+            "Struggling with noise? False ceilings can be your soundproofing savior. Specific materials and insulation techniques can significantly reduce noise transfer, creating a quieter and more peaceful environment.",
         },
         {
-          heading: "Position the chairs:",
+          heading: "Climate Control Champion",
           subtitle:
-            "Position the chairs around the sofa to create a balanced seating arrangement. You can place them opposite the sofa, at an angle, or perpendicular to it, depending on the room's layout and your preference. Ensure there's enough space between chairs for people to move comfortably.",
+            "False ceilings can help regulate your space's temperature. By creating a pocket of air between the original ceiling and the false ceiling, you can improve insulation and potentially save on energy costs.",
         },
         {
-          heading: "Accessorize and finalize:",
+          heading: "Perfect for Imperfections",
           subtitle:
-            "Once you've arranged the main pieces, add accessories such as coffee tables, side tables, rugs, and lamps to enhance the functionality and style of the seating area. Play with different configurations until you find the one that feels most inviting and cohesive.",
+            "Does your existing ceiling have imperfections or cracks?  <a class = 'linkStyle' href = '/services/false-ceiling'>Ashiana’s false ceiling design services</a> provide a quick and effective solution, hiding flaws and creating a smooth, finished look for your space.",
         },
       ],
     },
     {
-      text: "Skylight Dome",
-      link: "#Skylight_Dome",
+      text: "ELECTRICAL",
+      link: "/services/electrical",
       dropdown: [
         {
-          heading: "Prepare the Opening:",
+          heading: "Safety First",
           subtitle:
-            "Measure and mark the area on your ceiling where you want to install the skylight dome. Ensure there are no obstructions such as wiring or pipes in the area. Cut an opening in the ceiling according to the dimensions specified in the skylight dome's instructions. Use appropriate safety gear such as goggles and a dust mask.",
+            "Electrical work can be dangerous. Qualified electricians have the expertise to ensure safe installations, repairs, and upgrades, minimizing the risk of electrical hazards.",
         },
         {
-          heading: "Install the Frame:",
+          heading: "Code Compliance",
           subtitle:
-            "Place the skylight dome's frame into the opening. Ensure it fits snugly and is level. Use shims if necessary to make adjustments. Secure the frame to the ceiling joists using screws or nails as specified in the instructions. Ensure the frame is tightly sealed to prevent leaks.",
+            "Electrical codes exist for a reason! <a class = 'linkStyle' href = '/'>Ashiana’s</a> Electricians ensure your wiring and systems meet all current safety standards, giving you peace of mind.",
         },
         {
-          heading: "Weatherproofing:",
+          heading: "Modernization Magic",
           subtitle:
-            "Apply weatherproofing materials such as flashing around the perimeter of the frame. This will help prevent water from leaking into your home. Follow the manufacturer's instructions carefully, as the exact process may vary depending on the type of skylight dome you're installing.",
+            "Need to upgrade your outdated electrical system? <a class = 'linkStyle' href = '/services/electrical'>Ashiana’s Electrical Services in Kolkata</a> can assess your needs and recommend solutions to handle increased power demands or integrate new technologies seamlessly.",
         },
         {
-          heading: "Install the Dome:",
+          heading: "Troubleshooting Expertise",
           subtitle:
-            "Carefully place the dome onto the frame, making sure it fits properly and is seated securely. Use the provided fasteners to attach the dome to the frame according to the manufacturer's instructions. Double-check that everything is tightly sealed to prevent drafts and leaks.",
+            "Facing electrical issues? Electricians have the skills to diagnose problems quickly and efficiently, getting your power back on track with minimal disruption.",
         },
         {
-          heading: "Finishing Touches:",
+          heading: "Lighting Design Powerhouse",
           subtitle:
-            "Once the dome is securely in place, inspect the installation to ensure everything is sealed properly and there are no gaps or leaks. If necessary, apply additional sealant or weatherproofing materials as needed. Finally, clean up any debris from the installation process and enjoy the natural light flooding into your space!",
+            "Lighting plays an important role in creating ambiance and functionality. <a class = 'linkStyle' href = '/services/electrical'>Ashiana’s Electrical Services in Kolkata</a> can help you design and install a lighting system that meets your needs, from task lighting to mood lighting.",
         },
       ],
     },
     {
-      text: "Stone Art",
-      link: "#Stone_Art",
+      text: "FLOORING",
+      link: "/services/flooring",
       dropdown: [
         {
-          heading: "Preparation:",
+          heading: "Style Showcase",
           subtitle:
-            "First, we need to clear the area where we want to install the stone art. We'll make sure the surface is clean, level, and free from any debris. Let's gather all the necessary materials and tools such as the stones, adhesive (like mortar or construction adhesive), trowel, level, gloves, safety glasses, and a brush for cleaning.",
+            "From the warmth of hardwood to the timeless elegance of stone, flooring options are vast. Select a material and style that complements your décor and reflects your taste. Create a seamless flow throughout your space or define distinct areas with contrasting floor choices.",
         },
         {
-          heading: "Layout Design:",
+          heading: "Durability Depends on You",
           subtitle:
-            "Together, we'll plan the layout of our stone art. We can sketch it out on paper or lay the stones out on the ground to visualize how they will fit together. We should consider the pattern, color variations, and texture of the stones to create an appealing design.",
+            "Consider your lifestyle and needs. High-traffic areas may benefit from durable materials like tile or laminate, while cozy bedrooms can embrace plush carpets. Explore options from <a class = 'linkStyle' href = '/services/flooring'>The Best Flooring Solutions in Kolkata</a> that offer scratch and water resistance for added peace of mind.",
         },
         {
-          heading: "Apply Adhesive:",
+          heading: "Comfort Underfoot",
           subtitle:
-            "Now, we'll start by applying a layer of adhesive to the surface where we'll be placing the stones. Using the trowel, we'll spread the adhesive evenly, ensuring full coverage. Let's work in small sections to prevent the adhesive from drying out before we place the stones.",
+            "The right flooring feels as good as it looks. Opt for materials that provide warmth, sound insulation, and comfort underfoot, creating a space that's not only stylish but also inviting and comfortable.",
         },
         {
-          heading: "Place Stones:",
+          heading: "Maintenance Matters",
           subtitle:
-            "Together, we'll carefully place each stone onto the adhesive, following our layout design. We'll press firmly to ensure good adhesion. We'll use a level to make sure the stones are straight and even. We can adjust as needed before the adhesive sets.",
+            "Different flooring materials require different levels of care. Choose an option that suits your lifestyle. Hardwood may require regular refinishing, while laminate offers easy maintenance with minimal cleaning needs.",
         },
         {
-          heading: "Finishing Touches:",
+          heading: "Investment for Years to Come",
           subtitle:
-            "Once all the stones are in place and the adhesive has dried according to the manufacturer's instructions, we can fill in any gaps between the stones with additional adhesive or grout. We'll clean off any excess adhesive or grout with a damp cloth or brush. Finally, we'll allow the installation to cure completely before subjecting it to any heavy use or foot traffic.",
+            "Flooring is a significant investment that can last for years. Choose high-quality materials and professional installation from <a class = 'linkStyle' href = '/'>Ashiana</a> for a beautiful, long-lasting foundation for your space.",
         },
       ],
     },
     {
-      text: "Water Proofing",
-      link: "#Water_Proofing",
+      text: "PLUMBING",
+      link: "/services/plumbing",
       dropdown: [
         {
-          heading: "Inspect for Weak Points:",
+          heading: "Leak Detection and Repair",
           subtitle:
-            "We start by inspecting the exterior of the house for any weak points such as cracks in the foundation, gaps around doors and windows, or damaged roofing materials.",
+            "Leaking pipes can cause significant damage. Professional plumbers from Ashiana can identify leaks quickly and efficiently, saving you money on water bills and preventing costly repairs down the line.",
         },
         {
-          heading: "Seal Cracks and Gaps:",
+          heading: "Fixture Installation and Upgrades",
           subtitle:
-            "We use appropriate sealants like silicone or polyurethane to seal any cracks or gaps found during the inspection. This prevents water from seeping into the home through these vulnerable areas.",
+            "Need a new faucet or a sparkling new showerhead? Plumbers ensure proper installation of fixtures to prevent leaks and ensure optimal performance. They can also advise on water-saving upgrades that can benefit both your wallet and the environment.",
         },
         {
-          heading: "Improve Drainage:",
+          heading: "Clog Clearing Champions",
           subtitle:
-            "We ensure that the home's drainage system is working effectively by cleaning gutters, installing downspout extensions to direct water away from the foundation, and grading the soil around the house to slope away from the foundation.",
+            "Clogged drains are a homeowner's nightmare. Plumbers have the tools and expertise to tackle even the toughest clogs, getting your plumbing system flowing freely again.",
         },
         {
-          heading: "Waterproofing Exterior Surfaces:",
+          heading: "Maintenance Magic",
           subtitle:
-            "We apply waterproof coatings or membranes to exterior surfaces such as foundation walls, basement walls, and exterior walls to create a barrier against water intrusion.",
+            "Regular plumbing maintenance can prevent future problems. <a class = 'linkStyle' href = '/services/plumbing'>The Best PLUMBING Solutions in Kolkata</a> from <a class = 'linkStyle' href = '/'>Ashiana</a> can perform inspections, clean drains, and recommend preventative measures to keep your system functioning smoothly for years to come.",
         },
         {
-          heading: "Protect Interior Spaces:",
+          heading: "Peace of Mind with Expertise",
           subtitle:
-            "Finally, we take steps to protect interior spaces from water damage by installing sump pumps in basements, using waterproofing paints or sealants on interior walls, and ensuring that appliances like washing machines and water heaters are properly maintained to prevent leaks.",
+            "Plumbing issues can be stressful. Having a qualified plumber on call gives you peace of mind knowing you have a professional to address any plumbing challenges that may arise.",
+        },
+      ],
+    },
+    {
+      text: "PAINT",
+      link: "/services/paint",
+      dropdown: [
+        {
+          heading: "Instant Ambiance",
+          subtitle:
+            "Our experts work with you to create a whole new atmosphere with a fresh coat of paint. Light and airy colors open up a space, while bolder hues add drama and personality. We'll also guide you through exploring different finishes like matte, satin, or gloss to enhance the mood.",
+        },
+        {
+          heading: "Architectural Artistry",
+          subtitle:
+            "Want to draw attention to architectural details or create an illusion of spaciousness? <a class = 'linkStyle' href = '/services/paint'>Ashiana's painting professionals</a> use contrasting colors to define trim, moldings, or accent walls. Light colors on ceilings can make rooms feel taller, while darker tones create a cozy and intimate vibe.",
+        },
+        {
+          heading: "The Power of Camouflage",
+          subtitle:
+            "Imperfections or uneven walls got you down? Ashiana's paint services are your secret weapon! Strategic use of color and texture by our experts can minimize flaws and create a smooth, finished look.",
+        },
+        {
+          heading: "Express Your Style",
+          subtitle:
+            "Paint is a blank canvas for your creativity. <a class = 'linkStyle' href = '/'>Ashiana</a> helps you choose colors that reflect your personality and create a space that feels uniquely you. Don't be afraid to experiment with bolder palettes or accent walls to showcase your style with our expert guidance.",
+        },
+        {
+          heading: "Budget-Friendly Refresh",
+          subtitle:
+            "Compared to other design elements, paint is a relatively inexpensive way to update your space. A fresh coat from Ashiana can breathe new life into a room, offering a high return on investment for your design dollar.",
         },
       ],
     },
@@ -249,45 +310,68 @@ function page() {
         <div className="w-full py-16 space-y-20 sm:space-y-10">
           <ServicesInfo
             catName={servicesList[0].text}
-            topHeading="MODULAR KITCHEN"
+            topHeading="INTERIOR DESIGN"
             imagePosition="left"
-            imagesrc={"/services/mk.webp"}
+            imagesrc={"/services/INTERIORDESIGN.webp"}
             menuinfo={servicesList[0].dropdown}
           />
           <ServicesInfo
             catName={servicesList[1].text}
-            topHeading="MODULAR OFFICE"
+            topHeading="MODULAR KITCHEN"
             imagePosition="right"
-            imagesrc={"/services/mo.webp"}
+            imagesrc={"/services/mk.webp"}
             menuinfo={servicesList[1].dropdown}
           />
           <ServicesInfo
             catName={servicesList[2].text}
-            topHeading="CHAIR AND SOFA"
+            topHeading="MODULAR FURNITURE"
             imagePosition="left"
-            imagesrc="/services/ct.webp"
+            imagesrc={"/services/ct.webp"}
             menuinfo={servicesList[2].dropdown}
           />
           <ServicesInfo
             catName={servicesList[3].text}
-            topHeading="SKYLIGHT DOME"
+            topHeading="FALSE CEILING"
             imagePosition="right"
-            imagesrc="/services/sd.webp"
+            imagesrc="/services/FALSECEILING.webp"
             menuinfo={servicesList[3].dropdown}
           />
           <ServicesInfo
             catName={servicesList[4].text}
-            topHeading="STONE ART"
+            topHeading="ELECTRICAL"
             imagePosition="left"
-            imagesrc="/services/sa.webp"
+            imagesrc="/services/ELECTRICALID-SERVICE-CAT.webp"
             menuinfo={servicesList[4].dropdown}
           />
           <ServicesInfo
             catName={servicesList[5].text}
-            topHeading="WATER PROOFING"
+            topHeading="FLOORING"
+            imagePosition="right"
+            imagesrc="/services/FLOORING.webp"
+            menuinfo={servicesList[5].dropdown}
+          />
+          <ServicesInfo
+            catName={servicesList[6].text}
+            topHeading="PLUMBING"
+            imagePosition="left"
+            imagesrc="/services/PLUMBING.webp"
+            menuinfo={servicesList[6].dropdown}
+          />
+          <ServicesInfo
+            catName={servicesList[7].text}
+            topHeading="PAINT"
             imagePosition="right"
             imagesrc="/services/wp.webp"
-            menuinfo={servicesList[5].dropdown}
+            menuinfo={servicesList[7].dropdown}
+            otherchildren={
+              <p className="py-3 text-[1rem] text-gray-600 text-justify">
+                Choose{" "}
+                <Link className="linkStyle" href={"/services/paint"}>
+                  Ashiana, Kolkata&apos;s best paint service,
+                </Link>{" "}
+                and unleash the potential of your walls!
+              </p>
+            }
           />
         </div>
       </div>

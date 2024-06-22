@@ -45,11 +45,7 @@ function NavMenu({ pReferral }: IProps) {
         className={`flex-grow font-[600] h-full flex overflow-hidden sm:hidden items-center gap-7 justify-end josefin-sans-500 sm:absolute sm:flex-col sm:bg-[#ffffffef] sm:right-0 sm:text-black sm:top-[90px] sm:h-auto sm:w-full sm:items-start sm:gap-5 sm:px-6 sm:drop-shadow-2xl sm:transition-all duration-250`}
       >
         {nav_options.map((navItem, index) => (
-          <Navoptions
-            key={index}
-            optionname={navItem.name}
-            href={navItem.path}
-          />
+          <Navoptions key={index} navItem={navItem} />
         ))}
       </nav>
       <RxHamburgerMenu

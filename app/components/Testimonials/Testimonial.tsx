@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import StarRating from "./StarRating";
-import { MOBILE_VIEW_WIDTH } from "@/app/constant";
+import { MOBILE_VIEW_WIDTH, TAB_VIEW_WIDTH } from "@/app/constant";
 
 function Testimonial() {
   const [sliderPreviewView, setSliderPreviewView] = useState(3);
@@ -30,16 +30,22 @@ function Testimonial() {
       icon: "/testimonial/testi33.png",
       name: "Abhishek Banerjee",
       ratings: 5,
-      message: `Thank you, Ashiana Interiors, for the change my cafe looks it&apos;s awesome and I&quot;m really happy on your design planning again thank you so much keep it up. According to me you will be the best Interiors designer in the future.`,
+      message: `Thank you, Ashiana Interiors, for the change my cafe looks it&apos;s awesome and I&quot;m really happy on your design planning again thank you so much keep it up. According to me you will be the best Interiors designer`,
     },
   ];
 
   useEffect(() => {
-    setSliderPreviewView(window?.innerWidth <= MOBILE_VIEW_WIDTH ? 1 : 3);
+    if (window.innerWidth <= MOBILE_VIEW_WIDTH) {
+      setSliderPreviewView(1);
+    } else if (window.innerWidth <= TAB_VIEW_WIDTH) {
+      setSliderPreviewView(2);
+    } else {
+      setSliderPreviewView(3);
+    }
   }, []);
   return (
-    <section className="w-full px-28 sm:px-5 sm:min-h-full mt-0 sm:mt-10">
-      <h2 className="font-tex text-[#073842] leading-[1em] w-[850px] text-left text-[4.3rem] sm:w-full sm:text-4xl">
+    <section className="w-full px-28 sm:px-5 sm:min-h-full mt-0 sm:mt-10 md:px-10">
+      <h2 className="font-tex text-[#073842] leading-[1em] w-[850px] text-left text-[4.3rem] sm:w-full sm:text-4xl md:w-full">
         TESTIMONIALS
       </h2>
       <div className="w-full pt-9 border-t border-[#0738421f] mt-9 flex items-center sm:pt-5 sm:mt-5 sm:flex-col sm:items-start">

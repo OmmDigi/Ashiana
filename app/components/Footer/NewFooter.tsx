@@ -14,7 +14,7 @@ const locationList = [
 function NewFooter() {
   return (
     <footer className="bg-white">
-      <ul className="w-full grid grid-cols-3 text-gray-800 sm:grid-cols-1">
+      <ul className="w-full grid grid-cols-3 text-gray-800 sm:grid-cols-1 md:grid-cols-2">
         <li className="px-16 py-10 flex items-start flex-col gap-4 sm:px-5">
           <Link href="/">
             <Image
@@ -81,7 +81,7 @@ function NewFooter() {
                 />
               </Link>
             </li>
-            <li className="border w-auto border-[#AEAEAE] pt-1">
+            <li className="border w-auto border-[#AEAEAE] h-[58px] overflow-hidden">
               <Link href="https://www.premiumbathware.com/">
                 <Image
                   src="/channelpatner/cp-2.webp"
@@ -91,7 +91,7 @@ function NewFooter() {
                 />
               </Link>
             </li>
-            <li className="border w-auto border-[#AEAEAE] pt-1">
+            <li className="border w-auto border-[#AEAEAE] h-[58px] overflow-hidden">
               <Link href="https://grillex.in/">
                 <Image
                   src="/channelpatner/cp-3.webp"

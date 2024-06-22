@@ -6,8 +6,8 @@ import ClientsList from "./ClientsList";
 function ProjectTimeline() {
   return (
     <section className="w-full mt-20 sm:mt-10">
-      <div className="w-full px-28 sm:px-5">
-        <h2 className="font-tex text-[#073842] leading-[1em] w-[850px] text-left text-[4.3rem] sm:w-full sm:text-4xl">
+      <div className="w-full px-28 sm:px-5 md:px-10">
+        <h2 className="font-tex text-[#073842] leading-[1em] w-[850px] text-left text-[4.3rem] sm:w-full sm:text-4xl md:w-full">
           OUR CLIENTS
         </h2>
         <div className="w-full pt-9 border-t border-[#0738421f] mt-9 flex items-center sm:flex-col sm:items-start">

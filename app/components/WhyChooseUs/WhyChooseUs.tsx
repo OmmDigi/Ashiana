@@ -34,7 +34,7 @@ function WhyChooseUs() {
     },
   ];
   return (
-    <section className="w-full px-28 sm:px-5 mt-20 sm:mt-10">
+    <section className="w-full px-28 sm:px-5 mt-0 sm:mt-10">
       <h2 className="font-tex text-[#073842] leading-[1em] w-[850px] text-left text-[4.3rem] sm:w-full sm:text-4xl">
         WHY CHOOSE US?
       </h2>
@@ -43,7 +43,7 @@ function WhyChooseUs() {
           Your Vision, Our Design Expertise
         </p> */}
       </div>
-      <ul className="w-full grid grid-cols-4 gap-[30px] sm:grid-cols-1 sm:px-5 sm:pb-10 mt-16">
+      <ul className="w-full grid grid-cols-4 gap-[30px] sm:grid-cols-1 sm:px-5 sm:pb-10 mt-16 md:grid-cols-2">
         {gridInfoList.map((item, index) => (
           <li key={index} className="w-full text-[#203556] flex flex-col justify-start items-center relative">
             {item.image}

@@ -8,7 +8,6 @@ interface IProps {
 }
 
 function CollepseMenuLayout({ info }: IProps) {
-
   const [currentIndex, setCurrentIndex] = useState(-1);
 
   return (
@@ -18,12 +17,13 @@ function CollepseMenuLayout({ info }: IProps) {
           key={index}
           heading={item.heading}
           currentIndex={currentIndex}
-          setCurrentIndex = {setCurrentIndex}
-          index = {index}
+          setCurrentIndex={setCurrentIndex}
+          index={index}
         >
-          <p className="py-3 text-[1rem] text-gray-600 text-justify">
-            {item.subtitle}
-          </p>
+          <p
+            dangerouslySetInnerHTML={{ __html: item.subtitle }}
+            className="py-3 text-[1rem] text-gray-600 text-justify"
+          ></p>
         </CollepseMenuItem>
       ))}
     </section>

@@ -5,7 +5,6 @@ import { MdOutlineMail } from "react-icons/md";
 import OpenContactPopupBtn from "../components/Popup/OpenContactPopupBtn";
 import Image from "next/image";
 import { IoMdArrowDown } from "react-icons/io";
-import P from "../blog/P";
 import FAQ from "../components/FAQ";
 import SubHeading from "../blog/SubHeading";
 import { encodeUrl } from "@/utils/decodeUrl";
@@ -32,18 +31,18 @@ interface IProps {
 
 export default function EachServiceLayout(props: IProps) {
   return (
-    <section className="">
+    <section>
       <div className="w-full relative overflow-hidden h-[25rem] sm:h-[18rem]">
         <Image
-          className="size-full object-cover object-left-bottom"
+          className="size-full object-cover"
           src={props.topimage}
           alt="banner imag"
           height={1980}
           width={1980}
         />
-        <div className="size-full bg-[#0000008e] absolute top-0 bottom-0 flex items-center px-32 sm:px-5">
+        <div className="size-full bg-[#000000b2] absolute top-0 bottom-0 flex items-center px-32 sm:px-5">
           <div>
-            <h2 className="text-white font-tex text-3xl tracking-wider mt-6 sm:mt-20">
+            <h2 className="text-white font-tex text-3xl tracking-wider mt-16 sm:mt-20 sm:line-clamp-2">
               {props.topheading}
             </h2>
             <Navigator
@@ -57,7 +56,7 @@ export default function EachServiceLayout(props: IProps) {
       <div className="flex items-start px-10 py-10 sm:flex-col sm:px-5">
         <section className="w-[70%] sm:w-full">
           <ShimmerImage
-            className="h-[32rem] object-center sm:h-[12rem]"
+            className="h-[28rem] w-full object-cover sm:h-[12rem]"
             alt="images"
             src={props.blogimage}
             width={1280}

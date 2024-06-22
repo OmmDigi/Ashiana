@@ -1,12 +1,11 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { IoChevronBackSharp } from "react-icons/io5";
-import BannerText from "./BannerText";
 import NewBannerImage from "./NewBannerImage";
 
 export default function Banner() {
   const [currentBannerIndex, setCurretBannerIndex] = useState(0);
+  const [hasOverIndex, setHasOverIndex] = useState(false);
 
   const touchStartX = useRef<number | null>(null);
   const touchEndX = useRef<number | null>(null);
@@ -28,9 +27,26 @@ export default function Banner() {
   const goNext = () => {
     setCurretBannerIndex((preIndex) => {
       const nextIndex = preIndex + 1;
-      if (nextIndex > banner_images.length - 1) return 0;
+      if (nextIndex > banner_images.length - 1) {
+        // setHasOverIndex(!hasOverIndex);
+        return 0;
+      }
       return nextIndex;
     });
+
+    // setCurretBannerIndex((preIndex) => {
+    //   const nextIndex = preIndex + 1;
+    //   if (nextIndex > banner_images.length - 1) {
+    //     setHasOverIndex(true);
+    //   }
+
+    //   if (nextIndex > 7) {
+    //     setHasOverIndex(false);
+    //     return 0;
+    //   }
+
+    //   return nextIndex;
+    // });
   };
 
   const goPrev = () => {
@@ -44,7 +60,7 @@ export default function Banner() {
   useEffect(() => {
     const TIME_INTERVAL_ID = setInterval(() => {
       goNext();
-    }, 10 * 1000);
+    }, 5000);
 
     return () => clearInterval(TIME_INTERVAL_ID);
   }, [currentBannerIndex]);
@@ -82,13 +98,21 @@ export default function Banner() {
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
-        className="w-full h-[41rem] relative overflow-hidden sm:h-[21rem]"
+        className="w-full h-[32rem] relative overflow-hidden sm:h-[21rem]"
       >
         <NewBannerImage
+          hasOverIndex={false}
+          banner_texts={banner_texts}
           banner_images={banner_images}
           currentBannerIndex={currentBannerIndex}
         />
-        <div className="size-full bg-[#00000077] absolute top-0 bottom-0 z-10">
+
+        {/* <AliceCarousel autoHeight = {true} autoPlay autoPlayInterval={3000} infinite disableDotsControls disableButtonsControls>
+          {banner_images.map((image) => (
+            <Image className="size-full object-cover" alt="" src={`/banner/${image}`} height={1200} width={1200} />
+          ))}
+        </AliceCarousel> */}
+        {/* <div className="size-full bg-[#00000077] absolute top-0 bottom-0 z-10">
           <section className="size-full flex items-center justify-center relative sm:pt-10">
             <BannerText
               className={
@@ -121,7 +145,7 @@ export default function Banner() {
               </button>
             </div>
           </section>
-        </div>
+        </div> */}
 
         <div className="absolute bottom-0 z-10 w-full py-10 flexCenter">
           {banner_images.map((item, index) => (

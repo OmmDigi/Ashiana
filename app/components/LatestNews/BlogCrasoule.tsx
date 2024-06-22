@@ -4,6 +4,7 @@ import { IBlog } from "@/types/blogs";
 import React, { useEffect, useRef, useState } from "react";
 import { GrLinkNext } from "react-icons/gr";
 import BlogItem from "./BlogItem";
+import { MOBILE_VIEW_WIDTH, TAB_VIEW_WIDTH } from "@/app/constant";
 
 interface IProps {
   blogsData: IBlog[];
@@ -45,8 +46,28 @@ export default function BlogCrasoule({ blogsData }: IProps) {
       setBlogs(newList);
     }
 
-    if (window.innerWidth < 639) {
+    function forTabDevices() {
+      const newList: IBlog[][] = [];
+      let count = 0;
+      let currentIndex = 0;
+      blogsData.forEach((_, index) => {
+        currentIndex = blogsData.length - 1 - index;
+        if (!newList[count]) {
+          newList[count] = [blogsData[currentIndex]];
+        } else {
+          newList[count].push(blogsData[currentIndex]);
+        }
+        if ((index + 1) % 2 === 0) {
+          count++;
+        }
+      });
+      setBlogs(newList);
+    }
+
+    if (window.innerWidth < MOBILE_VIEW_WIDTH) {
       forMobileDevices();
+    } else if (window.innerWidth === TAB_VIEW_WIDTH) {
+      forTabDevices();
     } else {
       forNotMobile();
     }
@@ -103,7 +124,7 @@ export default function BlogCrasoule({ blogsData }: IProps) {
             onTouchEnd={handleTouchEnd}
             style={{ translate: `-${currentCrasoulIndex * 100}%` }}
             key={index}
-            className="w-full flex-shrink-0 grid grid-cols-3 gap-6 px-28 mt-10 sm:grid-cols-1 sm:px-5 transition-all duration-500"
+            className="w-full flex-shrink-0 grid grid-cols-3 gap-6 px-28 mt-10 sm:grid-cols-1 sm:px-5 transition-all duration-500 md:px-10 md:grid-cols-2"
           >
             {eachUL.map((item) => (
               <BlogItem key={item.id} blogitem={item} />

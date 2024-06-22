@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 
 import { GoArrowDownLeft } from "react-icons/go";
-import { MOBILE_VIEW_WIDTH } from "@/app/constant";
+import { MOBILE_VIEW_WIDTH, TAB_VIEW_WIDTH } from "@/app/constant";
 import OpenContactPopupBtn from "../Popup/OpenContactPopupBtn";
 
 function SpecialServices() {
@@ -35,7 +35,13 @@ function SpecialServices() {
   };
 
   useEffect(() => {
-    setSliderPreviewView(window?.innerWidth <= MOBILE_VIEW_WIDTH ? 1 : 4);
+    if (window.innerWidth <= MOBILE_VIEW_WIDTH) {
+      setSliderPreviewView(1);
+    } else if (window.innerWidth <= TAB_VIEW_WIDTH) {
+      setSliderPreviewView(3);
+    } else {
+      setSliderPreviewView(4);
+    }
     if (currentIndex !== -1) {
       if (swiperRef.current) {
         swiperRef.current.swiper.slideTo(currentIndex);
@@ -43,8 +49,8 @@ function SpecialServices() {
     }
   }, [currentIndex]);
   return (
-    <section className="w-full px-28 sm:px-5 sm:min-h-full mt-20 sm:mt-10">
-      <h2 className="font-tex text-[#073842] leading-[1em] w-[850px] text-left text-[4.3rem] sm:w-full sm:text-4xl">
+    <section className="w-full px-28 sm:px-5 sm:min-h-full mt-20 sm:mt-10 md:px-10">
+      <h2 className="font-tex text-[#073842] leading-[1em] w-[850px] text-left text-[4.3rem] sm:w-full sm:text-4xl md:w-full">
         SOME SPECIAL SERVICES
       </h2>
       <div className="w-full pt-9 border-t border-[#0738421f] mt-9 flex items-center sm:pt-5 sm:mt-5 sm:flex-col sm:items-start">
@@ -77,7 +83,10 @@ function SpecialServices() {
                     <h2 className="josefin-sans-400 px-4 py-1 pb-2">
                       {item.name}
                     </h2>
-                    <OpenContactPopupBtn title={`Open Contact Form Button ${index}`} className="size-12 bg-white absolute right-0 flexCenter cursor-pointer group/request">
+                    <OpenContactPopupBtn
+                      title={`Open Contact Form Button ${index}`}
+                      className="size-12 bg-white absolute right-0 flexCenter cursor-pointer group/request"
+                    >
                       <div className="size-6 bg-gray-800 rounded-full flexCenter group-hover/request:rotate-[360deg] transition-all duration-1000 arrowRotateTransitonTimingFunction">
                         <GoArrowDownLeft className="text-white rotate-180" />
                       </div>

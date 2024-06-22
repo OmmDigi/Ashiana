@@ -6,8 +6,8 @@ import AboutTabs from "./AboutTabs";
 
 function About() {
   return (
-    <section className="w-full min-h-[45rem] px-28 sm:px-5 sm:min-h-full mt-20 sm:mt-10">
-      <h2 className="font-tex text-[#073842] leading-[1em] w-[850px] text-left text-[4.3rem] sm:w-full sm:text-4xl">
+    <section className="w-full min-h-[45rem] px-28 sm:px-5 sm:min-h-full mt-16 sm:mt-10 md:px-10">
+      <h2 className="font-tex text-[#073842] leading-[1em] w-[850px] text-left text-[4.3rem] sm:w-full sm:text-4xl md:w-full">
         ABOUT US
       </h2>
       <div className="w-full pt-9 border-t border-[#0738421f] mt-9 flex items-center sm:pt-5 sm:mt-5 sm:flex-col sm:items-start">

@@ -1,6 +1,5 @@
 import React from "react";
 import P from "@/app/blog/P";
-import { decodeUrl } from "@/utils/decodeUrl";
 import { servicesList } from "@/constant";
 import EachServiceLayout from "../EachServiceLayout";
 import GridImage from "../GridImage";

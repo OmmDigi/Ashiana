@@ -7,6 +7,7 @@ import Link from "next/link";
 import { encodeUrl } from "@/utils/decodeUrl";
 
 interface IProps {
+  otherchildren ? : React.ReactNode;
   catName?: string;
   topHeading?: string;
   imagePosition: "left" | "right";
@@ -15,6 +16,7 @@ interface IProps {
 }
 
 function ServicesInfo({
+  otherchildren,
   catName,
   topHeading,
   imagePosition,
@@ -22,15 +24,22 @@ function ServicesInfo({
   menuinfo,
 }: IProps) {
   return (
-    <section className="w-full">
-      <div className="w-full grid grid-cols-2 sm:grid-cols-1 overflow-hidden">
+    <section className="w-full h-full">
+      <div className="w-full grid grid-cols-2 max-h-full sm:grid-cols-1 overflow-hidden">
         {imagePosition === "left" ? (
           <>
             <IntersectionObserverComponent
               beforeAnimation="opacity-[0.5] drop-shadow-md"
               afterAnimation="opacity-[1] drop-shadow-none"
+              className="overflow-hidden h-[30rem] sm:h-[13rem] w-full"
             >
-              <Image src={imagesrc} alt="img" height={1200} width={1200} />
+              <Image
+                className="object-cover size-full"
+                src={imagesrc}
+                alt="img"
+                height={1200}
+                width={1200}
+              />
             </IntersectionObserverComponent>
 
             <div className="w-full px-14 sm:px-0 overflow-hidden relative">
@@ -55,9 +64,10 @@ function ServicesInfo({
                 </div>
               ) : null}
               <CollepseMenuLayout info={menuinfo} />
+              {otherchildren}
               <span
                 // href="/contact-us"
-                className="font-medium text-[20px] sm:my-4 flex items-center gap-2 absolute bottom-0 josefin-sans-400 sm:static"
+                className="font-medium text-[20px] my-10 sm:my-4 flex items-center gap-2 bottom-0 josefin-sans-400 sm:static"
               >
                 <span>
                   For {catName} Solutions in Kolkata :{" "}
@@ -70,7 +80,7 @@ function ServicesInfo({
           </>
         ) : (
           <>
-            <div className={`w-full px-14 sm:px-0 relative`}>
+            <div className={`w-full px-14 sm:px-0 relative sm:order-1`}>
               <a id={catName?.replaceAll(" ", "_")}></a>
               {topHeading ? (
                 <div className="w-full flex items-center justify-between pb-5 sm:flex-col sm:items-start sm:pt-5">
@@ -89,9 +99,10 @@ function ServicesInfo({
               ) : null}
 
               <CollepseMenuLayout info={menuinfo} />
+              {otherchildren}
               <span
                 // href="/contact-us"
-                className="font-medium text-[20px] sm:my-4 flex items-center gap-2 absolute bottom-0 josefin-sans-400 sm:static"
+                className="font-medium text-[20px] sm:my-4 flex items-center gap-2 my-10 bottom-0 josefin-sans-400 sm:static"
               >
                 <span>
                   For {catName} Solutions in Kolkata :{" "}
@@ -104,8 +115,15 @@ function ServicesInfo({
             <IntersectionObserverComponent
               beforeAnimation="opacity-[0.5] drop-shadow-md"
               afterAnimation="opacity-[1] drop-shadow-none"
+              className="overflow-hidden h-[30rem] sm:h-[13rem] w-full sm:order-2"
             >
-              <Image src={imagesrc} alt="img" height={1200} width={1200} />
+              <Image
+                className="object-cover size-full"
+                src={imagesrc}
+                alt="img"
+                height={1200}
+                width={1200}
+              />
             </IntersectionObserverComponent>
           </>
         )}
