@@ -25,7 +25,7 @@ export default function page() {
     <EachServiceLayout
       navigatorInfo={navigatorInfo}
       blogheading="Best False Ceiling Designer In Kolkata"
-      blogimage="/services/FALSECEILING.jpg"
+      blogimage="/services/FALSECEILING.webp"
       faqs={[]}
       servicesList={servicesList}
       servicename="false ceiling"
