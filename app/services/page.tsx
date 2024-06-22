@@ -340,7 +340,7 @@ function page() {
             catName={servicesList[4].text}
             topHeading="ELECTRICAL"
             imagePosition="left"
-            imagesrc="/services/ELECTRICALID-SERVICE-CAT.webp"
+            imagesrc="/services/ashiana-electonics-banner-webp.jpg"
             menuinfo={servicesList[4].dropdown}
           />
           <ServicesInfo
