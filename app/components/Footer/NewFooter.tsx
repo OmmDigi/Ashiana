@@ -81,8 +81,8 @@ function NewFooter() {
           </h2>
 
           <ul className="grid grid-cols-2 gap-4 pt-3">
-            {channelPatner.map((item) => (
-              <li className="border-2 flexCenter">
+            {channelPatner.map((item, index) => (
+              <li key={index} className="border-2 flexCenter">
                 <Link className="block" href={item.path}>
                   <Image src={item.img} alt="cp1" height={180} width={180} />
                 </Link>
