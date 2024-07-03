@@ -27,7 +27,7 @@ function ShowCases() {
 
       <ul className="w-full grid grid-cols-3 gap-10 sm:grid-cols-1">
         {imageesList.map((src, index) => (
-          <li key={index} className="w-full h-56 overflow-hidden">
+          <li key={index} className="w-full min-h-56 bg-black overflow-hidden">
             <OpenShowImageDialgoBtn imgSrc={src} className="size-full object-cover cursor-pointer hover:scale-105 transition-all duration-300">
               <Image
                 className="size-full object-cover cursor-pointer hover:scale-105 transition-all duration-300"

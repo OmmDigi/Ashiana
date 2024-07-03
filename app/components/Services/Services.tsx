@@ -8,7 +8,7 @@ import { MdOutlineAdd } from "react-icons/md";
 
 export default function Services() {
   return (
-    <section className="w-full min-h-full px-28 sm:px-5 flex flex-col items-center mt-10 sm:mt-10 md:px-10">
+    <section className="w-full min-h-full max-layout px-28 sm:px-5 flex flex-col items-center mt-10 sm:mt-10 md:px-10">
       <div className="max-w-[1524px] min-w-full">
         <h2 className="font-tex text-[#073842] leading-[1em] w-[850px] text-left text-[4.3rem] uppercase sm:w-full sm:text-4xl md:w-full">
           Beautify your interiors

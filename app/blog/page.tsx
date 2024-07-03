@@ -16,7 +16,7 @@ function page() {
   let currentIndex = 0;
   return (
     <main className="w-full flex flex-col items-center pt-[90px]">
-      <div className="max-w-[1324px] px-20 sm:px-5 sm:max-w-full">
+      <div className="max-layout px-20 sm:px-5 sm:max-w-full">
         <div className="w-full flex flex-col items-center">
           <h2 className="font-bold text-4xl">
             OUR <span className="text-[#F83131]">BLOGS</span>

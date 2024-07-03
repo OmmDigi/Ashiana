@@ -18,7 +18,8 @@ function Testimonial() {
       icon: "/testimonial/testi-1.png",
       name: "Ayesha Pachal",
       ratings: 5,
-      message: "Excellent company to work with if you are looking to have your interiors done. Beautiful finishes and wonderfully executed work. Designs are superb and one of a kind, extremely talented and wonderful group of people",
+      message:
+        "Excellent company to work with if you are looking to have your interiors done. Beautiful finishes and wonderfully executed work. Designs are superb and one of a kind, extremely talented and wonderful group of people",
     },
     {
       icon: "/testimonial/testi-style3-2.png",
@@ -44,7 +45,7 @@ function Testimonial() {
     }
   }, []);
   return (
-    <section className="w-full px-28 sm:px-5 sm:min-h-full mt-0 sm:mt-10 md:px-10">
+    <section className="w-full max-layout px-28 sm:px-5 sm:min-h-full mt-0 sm:mt-10 md:px-10">
       <h2 className="font-tex text-[#073842] leading-[1em] w-[850px] text-left text-[4.3rem] sm:w-full sm:text-4xl md:w-full">
         TESTIMONIALS
       </h2>

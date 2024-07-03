@@ -6,7 +6,7 @@ import OpenContactPopupBtn from "../Popup/OpenContactPopupBtn";
 function ContactUs() {
   return (
     <section className="w-full mt-0 sm:mt-0">
-      <div className="w-full px-28 sm:px-5 md:px-10">
+      <div className="w-full px-28 sm:px-5 md:px-10 max-layout">
         <h2 className="font-tex text-[#073842] leading-[1em] w-[850px] text-left text-[4.3rem] uppercase sm:w-full sm:text-4xl md:w-full">
           Get in Touch
         </h2>

@@ -133,7 +133,7 @@ function ProjectsPage({ searchParams }: { searchParams: { catname: string } }) {
                   alt=""
                   placeholder="blur"
                   blurDataURL="/loading.webp"
-                  className="h-[220px] object-cover"
+                  className="h-[18%] sm:h-[220px] object-cover"
                   width={520}
                   height={362}
                 />

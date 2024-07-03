@@ -15,7 +15,7 @@ function MyProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <div ref={scrollbarRef} className="h-screen overflow-hidden relative overflow-y-scroll w-full">
-      <div className="max-w-[1500px] mx-auto">
+      <div>
         <Provider store={store}>
           <ContactPopup />
           <FloatingButton />

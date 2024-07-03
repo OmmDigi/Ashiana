@@ -11,10 +11,20 @@ const locationList = [
   // "55, Gariahat Road, Ballygunge phari, Kolkata -700019.",
 ];
 
+const channelPatner = [
+  {
+    img: "/channelpatner/promiplast.webp",
+    path: "https://www.promiplastwindows.com/",
+  },
+  { img: "/channelpatner/cp-2.webp", path: "https://www.premiumbathware.com/" },
+  { img: "/channelpatner/cp-3.webp", path: "https://grillex.in/" },
+  { img: "/channelpatner/cp-4-4.webp", path: "https://www.saint-gobain.com/" },
+];
+
 function NewFooter() {
   return (
-    <footer className="bg-white">
-      <ul className="w-full grid grid-cols-3 text-gray-800 sm:grid-cols-1 md:grid-cols-2">
+    <footer className="bg-white ">
+      <ul className="w-full grid grid-cols-3 text-gray-800 sm:grid-cols-1 md:grid-cols-2 max-layout">
         <li className="px-16 py-10 flex items-start flex-col gap-4 sm:px-5">
           <Link href="/">
             <Image
@@ -71,46 +81,13 @@ function NewFooter() {
           </h2>
 
           <ul className="grid grid-cols-2 gap-4 pt-3">
-            <li>
-              <Link href="https://www.promiplastwindows.com/">
-                <Image
-                  src="/channelpatner/cp-1.webp"
-                  alt="cp1"
-                  height={180}
-                  width={180}
-                />
-              </Link>
-            </li>
-            <li className="border w-auto border-[#AEAEAE] h-[58px] overflow-hidden">
-              <Link href="https://www.premiumbathware.com/">
-                <Image
-                  src="/channelpatner/cp-2.webp"
-                  alt="cp1"
-                  height={180}
-                  width={180}
-                />
-              </Link>
-            </li>
-            <li className="border w-auto border-[#AEAEAE] h-[58px] overflow-hidden">
-              <Link href="https://grillex.in/">
-                <Image
-                  src="/channelpatner/cp-3.webp"
-                  alt="cp1"
-                  height={180}
-                  width={180}
-                />
-              </Link>
-            </li>
-            <li className="border border-[#AEAEAE]">
-              <Link href="https://www.saint-gobain.com/">
-                <Image
-                  src="/channelpatner/cp-4-4.webp"
-                  alt="cp1"
-                  height={180}
-                  width={180}
-                />
-              </Link>
-            </li>
+            {channelPatner.map((item) => (
+              <li className="border-2 flexCenter">
+                <Link className="block" href={item.path}>
+                  <Image src={item.img} alt="cp1" height={180} width={180} />
+                </Link>
+              </li>
+            ))}
           </ul>
         </li>
       </ul>

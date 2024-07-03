@@ -56,7 +56,7 @@ export default function EachServiceLayout(props: IProps) {
       <div className="flex items-start px-10 py-10 sm:flex-col sm:px-5">
         <section className="w-[70%] sm:w-full">
           <ShimmerImage
-            className="h-[28rem] w-full object-cover sm:h-[12rem]"
+            className="h-[38rem] w-full object-cover sm:h-[12rem]"
             alt="images"
             src={props.blogimage}
             width={1280}

@@ -49,7 +49,7 @@ function SpecialServices() {
     }
   }, [currentIndex]);
   return (
-    <section className="w-full px-28 sm:px-5 sm:min-h-full mt-20 sm:mt-10 md:px-10">
+    <section className="w-full px-28 sm:px-5 sm:min-h-full mt-20 sm:mt-10 md:px-10 max-layout">
       <h2 className="font-tex text-[#073842] leading-[1em] w-[850px] text-left text-[4.3rem] sm:w-full sm:text-4xl md:w-full">
         SOME SPECIAL SERVICES
       </h2>

@@ -34,7 +34,7 @@ function WhyChooseUs() {
     },
   ];
   return (
-    <section className="w-full px-28 sm:px-5 mt-0 sm:mt-10">
+    <section className="w-full px-28 sm:px-5 mt-0 sm:mt-10 max-layout">
       <h2 className="font-tex text-[#073842] leading-[1em] w-[850px] text-left text-[4.3rem] sm:w-full sm:text-4xl">
         WHY CHOOSE US?
       </h2>

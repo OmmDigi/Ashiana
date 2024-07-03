@@ -28,7 +28,7 @@ function page() {
         />
       </div>
 
-      <div className="px-28 sm:px-5">
+      <div className="px-28 sm:px-5 max-layout">
         <div className="w-full grid grid-cols-2 mt-20 gap-20 sm:grid-cols-1 sm:mt-9">
           <div className="w-full">
             <h1 className="font-tex text-[#073842] leading-[1em] w-[850px] text-left text-8xl sm:text-4xl sm:w-full">

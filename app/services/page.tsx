@@ -280,13 +280,13 @@ function page() {
       <div className="px-20 py-20 sm:px-5">
         <div className="w-full">
           <div className="flex gap-20 sm:flex-col sm:gap-0">
-            <div className="max-w-[662px]">
+            <div className="w-full">
               <h1 className="font-tex text-[#073842] leading-[1em] text-left text-8xl sm:text-4xl sm:w-full">
                 Our Services
               </h1>
               <div className="w-full bg-[#0738421f] h-[1px] my-6 sm:my-3"></div>
             </div>
-            <div className="max-w-[662px] flex items-start justify-end">
+            <div className="w-full flex items-start justify-end">
               <ul className="w-full grid grid-cols-2 gap-3 sm:grid-cols-1">
                 {servicesList.map((service) => (
                   <li key={service.link}>

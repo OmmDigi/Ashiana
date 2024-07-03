@@ -60,7 +60,7 @@ function ProjectSlider() {
             <li
               className={`flex flex-col justify-between gap-20 sm:min-w-full sm:min-h-[350px]`}
             >
-              {item.imgPostion === "top" ? (
+              {/* {item.imgPostion === "top" ? (
                 <ImageLayout img={item.img} />
               ) : (
                 <ImageDetails
@@ -79,7 +79,15 @@ function ProjectSlider() {
                   heading={item.heading}
                   description={item.description}
                 />
-              )}
+              )} */}
+              <ImageLayout img={item.img} />
+              <div className="w-full h-[2px] bg-[#CCD1D8] relative flexCenter">
+                <div className="size-4 bg-gray-800 rounded-full"></div>
+              </div>
+              <ImageDetails
+                heading={item.heading}
+                description={item.description}
+              />
             </li>
           </SwiperSlide>
         ))}
