@@ -23,9 +23,9 @@ const channelPatner = [
 
 function NewFooter() {
   return (
-    <footer className="bg-white ">
-      <ul className="w-full grid grid-cols-3 text-gray-800 sm:grid-cols-1 md:grid-cols-2 max-layout">
-        <li className="px-16 py-10 flex items-start flex-col gap-4 sm:px-5">
+    <footer className="bg-white">
+      <ul className="w-[86%] grid mx-auto gap-16 grid-cols-3 text-gray-800 sm:grid-cols-1 md:grid-cols-2 ">
+        <li className="py-10 flex items-start flex-col gap-4 sm:px-5">
           <Link href="/">
             <Image
               className="w-52"
@@ -57,7 +57,7 @@ function NewFooter() {
             </Link>
           </div>
         </li>
-        <li className="px-16 py-10 sm:px-5">
+        <li className="py-10 sm:px-5">
           <h2 className="text-2xl josefin-sans-500 tracking-wider">
             Corporate Office
           </h2>
@@ -75,7 +75,7 @@ function NewFooter() {
             ))}
           </ul>
         </li>
-        <li className="px-16 py-10 sm:px-5 sm:pb-28">
+        <li className="py-10 sm:px-5 sm:pb-28">
           <h2 className="text-2xl josefin-sans-500 tracking-wider">
             Channel Partners
           </h2>
