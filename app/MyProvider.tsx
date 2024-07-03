@@ -14,11 +14,8 @@ function MyProvider({ children }: { children: React.ReactNode }) {
   const scrollbarRef = useRef<HTMLDivElement>(null);
 
   return (
-    <>
-      <div
-        ref={scrollbarRef}
-        className="h-screen overflow-hidden overflow-y-scroll max-w-[1500px] mx-auto"
-      >
+    <div ref={scrollbarRef} className="h-screen overflow-hidden relative overflow-y-scroll w-full">
+      <div className="max-w-[1500px] mx-auto">
         <Provider store={store}>
           <ContactPopup />
           <FloatingButton />
@@ -29,7 +26,7 @@ function MyProvider({ children }: { children: React.ReactNode }) {
           <NewFooter />
         </Provider>
       </div>
-    </>
+    </div>
   );
 }
 

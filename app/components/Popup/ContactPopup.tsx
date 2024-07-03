@@ -26,12 +26,15 @@ function ContactPopup() {
     dispatch(setPopupDilaogVisibility(false));
   };
 
-  const setInputErrorMessage = (ref : RefObject<HTMLInputElement>, errMsg : string) => {
-    if(ref.current) {
+  const setInputErrorMessage = (
+    ref: RefObject<HTMLInputElement>,
+    errMsg: string
+  ) => {
+    if (ref.current) {
       ref.current.setCustomValidity(errMsg);
       ref.current.reportValidity();
     }
-  }
+  };
 
   const handleFormSubmit = async () => {
     const formData = new FormData();
@@ -41,13 +44,16 @@ function ContactPopup() {
     const email = emailRef.current?.value;
     const message = messageRef.current?.value;
 
-    if(!name) return setInputErrorMessage(nameRef, "Enter your name here");
+    if (!name) return setInputErrorMessage(nameRef, "Enter your name here");
 
-    if(!number) return setInputErrorMessage(numberRef, "Enter your mobile number here");
-    if(number.length !== 10) return setInputErrorMessage(numberRef, "Enter a valid mobile number");
+    if (!number)
+      return setInputErrorMessage(numberRef, "Enter your mobile number here");
+    if (number.length !== 10)
+      return setInputErrorMessage(numberRef, "Enter a valid mobile number");
 
-    if(!email) return setInputErrorMessage(emailRef, "Enter your email here");
-    if(!email.includes("@")) return setInputErrorMessage(emailRef, "Enter a valid email address");
+    if (!email) return setInputErrorMessage(emailRef, "Enter your email here");
+    if (!email.includes("@"))
+      return setInputErrorMessage(emailRef, "Enter a valid email address");
 
     formData.set("name", name || "");
     formData.set("number", number || "");
@@ -64,7 +70,7 @@ function ContactPopup() {
   return (
     <div
       onClick={closeDialog}
-      className={`w-full h-full bg-[#00000042] fixed top-0 bottom-0 z-[60] ${
+      className={`w-full h-full bg-[#00000042] fixed left-0 right-0 top-0 bottom-0 z-[60] ${
         contactPopupVisibility ? "flexCenter" : "hidden"
       }`}
     >
@@ -98,21 +104,19 @@ function ContactPopup() {
             className="outline-none border w-full border-gray-800 px-3 py-2 focus:border-blue-400"
           />
           <input
-            
             ref={emailRef}
             type="email"
             placeholder="Your Email Address"
             className="outline-none border w-full border-gray-800 px-3 py-2 focus:border-blue-400"
           />
           <textarea
-            
             ref={messageRef}
             rows={4}
             className="outline-none border w-full border-gray-800 px-3 py-2 focus:border-blue-400"
             placeholder="Your Message"
           ></textarea>
           <button
-            disabled = {isLoading}
+            disabled={isLoading}
             onClick={handleFormSubmit}
             type="button"
             className="bg-black w-full h-9 text-white flexCenter"
