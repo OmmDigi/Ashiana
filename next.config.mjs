@@ -30,6 +30,11 @@ const nextConfig = {
         destination: "/services/paint-and-wallpaper",
         permanent: true,
       },
+      {
+        source: "/null",
+        destination: "/",
+        permanent: true,
+      },
     ];
   },
 };
